@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="guest">
+  <img src="{% static 'img/bg.jpg' %}" />
+  <div class="guest_container">
+    <h3>Welcome to the Swedish blogging platform. This is a test version but you can try to enter or register.</h3>
+    <a href="{% url 'home:login_page' %}"> LOGIN </a><br/>
+    <a href="{% url 'profile:registration_page' %}"> REGISTRATION </a>
+  </div>
+</div>
+
+<div class="btn_contact">
+
+  <a href="{% url 'home:about' %}">about</a>
+  <a href="{% url 'home:contact' %}">contact</a>
+
+  <p>&copy; 2019 <p>
+
+</div>
+
+
+{% endblock %}

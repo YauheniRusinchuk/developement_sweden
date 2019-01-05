@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% include 'header.html' %}
+
+<div class="detail_container">
+  <div class="detail_user_info">
+    {% if user == profile_detail.user %}
+      <a href="{% url 'settings:settings_page' pk=profile_detail.user.pk %}" class="settings_btn" >settings</a>
+    {% endif %}
+
+    {% if user != profile_detail.user %}
+        {% if flag %}
+            <a href="{% url 'home:unsubscriptions_page' pk=profile_detail.user.pk %}" class="follow_btn">unsubscribe</a>
+        {% else %}
+            <a href="{% url 'home:subscriptions_page' pk=profile_detail.user.pk %}" class="follow_btn">subscribe</a>
+        {% endif %}
+    {% endif %}
+    {% if profile_detail.avatar %}
+      <img src="{{profile_detail.avatar.url}}" alt="">
+    {% else %}
+      <img src="https://www.eduma.cz/images/avatar.jpg" alt="">
+    {% endif %}
+    <div class="detail_fullname">
+      <h3>{{profile_detail.fullname}}</h3>
+      <!--<p>{{profile_detail.fullname}}</p>-->
+      {% if profile_detail.description %}
+        <span>{{profile_detail.description}}</span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="detail_info_post">
+    <div class="btn_posts_followers">
+      <a class="btn_posts" href="">Posts</a><span>{{profile_detail.count}}</span>
+      <a class="btn_subscriptions" href="">subscriptions</a><span>{{profile_detail.count_subscriptions}}</span>
+    </div>
+    <div class="detail_profile_sub">
+        {% if profile_detail.subscriptions.all %}
+        {% for sub in profile_detail.subscriptions.all %}
+            <div class="profile_sub">
+                {% if sub.avatar %}
+                    <img src="{{sub.avatar.url}}" width="70px" height="70px;" />
+                {% else %}
+                    <img src="https://www.eduma.cz/images/avatar.jpg" width="70px" height="70px" alt="">
+                {% endif %}
+                <a href="{% url 'home:detail_profile' pk=sub.user.pk %}">{{sub.fullname}}</a>
+            </div>
+        {% endfor %}
+        {% else %}
+            <h3>NOT SUBSCRIBE</h3>
+        {% endif %}
+    </div>
+    {% if articles %}
+    {% for article in articles %}
+      <div class="post_container">
+        {% if user == profile_detail.user %}
+        <div class="delete_edit_post">
+            <a href="{% url 'home:edit_post' pk=article.pk %}">edit</a>
+            <a class="delete_btn" href="{% url 'home:delete_post' pk=article.pk %}">delete</a>
+        </div>
+        {% endif %}
+        <div class="post_info">
+          {% if profile_detail.avatar %}
+            <img src="{{profile_detail.avatar.url}}" width="30px" height="30px" alt="">
+          {% else %}
+            <img src="https://www.eduma.cz/images/avatar.jpg" width="30px" height="30px" alt="">
+          {% endif %}
+          <span class="user_post">{{profile_detail.fullname}}</span>
+          <span>{{article.date|date:'m-d H:i'}}</span>
+        </div>
+        <p>{{article.text}}</p>
+      </div>
+    {% endfor %}
+    {% else %}
+        <div class="not_articles">
+            <h3>You haven't written anything yet.</h3>
+        </div>
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}

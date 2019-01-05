@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% include 'header.html' %}
+
+<div class="new_post_container">
+    {% if profile.avatar %}
+        <img src="{{profile.avatar.url}}" width="50px" height="50px" />
+    {% else %}
+        <img src="https://www.eduma.cz/images/avatar.jpg" width="50px" height="50px" />
+    {% endif %}
+    <p>{{profile.user.username}}</p>
+    <form method="POST">{% csrf_token %}
+        <textarea required placeholder="Your text ..." name="text"></textarea>
+        <button type="submit" name="button">ADD</button>
+    </form>
+</div>
+{% endblock %}

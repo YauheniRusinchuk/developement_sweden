@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% include 'header.html' %}
+
+<div class="main_container">
+{% include 'last_subscriptions.html' %}
+  <div class="main_user_info">
+    {% if profile.avatar %}
+        <img src="{{profile.avatar.url}}" />
+    {% else %}
+        <img src="https://www.eduma.cz/images/avatar.jpg" />
+    {% endif %}
+    <div class="user_info">
+      <a href="{% url 'home:detail_profile' pk=user.pk %}">{{profile.fullname}}</a>
+      <!-- <p class="full_name">{{profile.fullname}}</p> -->
+    </div>
+
+    <div class="other_info">
+      <span>{{profile.count}}</span>
+      <p>Posts</p>
+      <span>{{profile.count_subscriptions}}</span>
+      <p>subscriptions</p>
+    </div>
+  </div>
+  {% if articles %}
+  {% for art in articles %}
+    <div class="article_main">
+        {% if user == art.author %}
+        <div class="delete_edit_post">
+            <a href="{% url 'home:edit_post' pk=art.pk %}">edit</a>
+            <a class="delete_btn" href="{% url 'home:delete_post' pk=art.pk %}">delete</a>
+        </div>
+        {% endif %}
+        <div class="article_info_user">
+            {% if art.author.profile.avatar %}
+                <img src="{{art.author.profile.avatar.url}}" width="30px" height="30px" />
+            {% else %}
+                <img src="https://www.eduma.cz/images/avatar.jpg" width="30px" height="30px" />
+            {% endif %}
+            <a href="{% url 'home:detail_profile' pk=art.author.pk %}">{{art.author.profile.fullname}}</a>
+            <span>{{art.date|date:'m-d H:i'}}</span>
+        </div>
+        <p>{{art.text}}</p>
+    </div>
+  {% endfor %}
+  {% else %}
+    <div class="not_articles">
+        <h3>No records yet.</h3>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+<div class="last_subscriptions_container">
+
+    <h6>last Subscriptions</h6>
+    {% if profile.last_five_sub %}
+    {% for sub in profile.last_five_sub %}
+        <div class="last_sub">
+            {% if sub.avatar %}
+                <img src="{{sub.avatar.url}}" width="40px" height="40px" />
+            {% else %}
+                <img src="https://www.eduma.cz/images/avatar.jpg" width="40px" height="40px" />
+            {% endif %}
+            <a href="{% url 'home:detail_profile' pk=sub.user.pk %}">{{sub.user.profile.fullname}}</a>
+        </div>
+    {% endfor %}
+    {% else %}
+        <div class="not_sub">
+            <p>You are not subscribed to anyone.</p>
+        </div>
+    {% endif %}
+</div>

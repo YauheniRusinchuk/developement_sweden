@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="guest">
+  <img src="{% static 'img/bg.jpg' %}" />
+  <div class="login_container">
+    <h3> Enter login and password. And then you will enter. </h3>
+    <form method="POST"> {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" name="button">login</button>
+    </form>
+  </div>
+</div>
+
+
+<div class="btn_contact">
+
+  <a href="">about</a>
+  <a href="">contact</a>
+  <p>&copy; 2019 <p>
+</div>
+
+
+{% endblock %}

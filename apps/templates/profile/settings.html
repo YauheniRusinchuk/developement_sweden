@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% include 'header.html' %}
+
+<div class="settings_container">
+
+  <h3> You can change some settings.</h3>
+
+
+  <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+      <label>New photo</label>
+      <div id="image-preview">
+          <label for="image-upload" id="image-label">Choose File</label>
+          <input type="file" name="image" id="image-upload" />
+      </div>
+      <label>Username</label>
+      <input type="text" name="username" value="{{profile.user.username}}">
+      <label>First name</label>
+      <input type="text" name="firstname" value="{{profile.user.first_name}}">
+      <label>Last name</label>
+      <input type="text" name="lastname" value="{{profile.user.last_name}}">
+      <label>Description</label>
+      <textarea name="description" >{{profile.description}}</textarea>
+
+    <button type="submit" name="button">UPDATE</button>
+
+  </form>
+
+
+    <div class="delete_profile_btn">
+        <a href="{% url 'home:delete_profile' pk=profile.user.pk %}">delete profile</a>
+    </div>
+
+</div>
+
+{% endblock %}

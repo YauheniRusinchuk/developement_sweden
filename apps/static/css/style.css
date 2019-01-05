@@ -1,0 +1,1046 @@
+@import url('https://fonts.googleapis.com/css?family=Mina:400,700');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Mina', sans-serif;
+}
+
+
+body {
+    /*background-color: #ebf3fc;*/
+    background-color: #fafafa;
+}
+
+/* GUEST */
+
+.guest img {
+  width: 100%;
+  background-color: #def1fa;
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+}
+
+
+.guest_container {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.guest_container h3 {
+  color: white;
+}
+
+
+.guest_container a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #4e9cf5;
+  border-radius: 3px;
+  padding: 3px 20px;
+  cursor: pointer;
+  margin: 10px;
+  background-color: #4e9cf5;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+
+
+
+
+/* END GUEST */
+
+
+
+/* LOGIN */
+.login_container {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.login_container h3 {
+  color: white;
+}
+
+
+.login_container form input {
+  width: 30%;
+  border: 2px solid white;
+  margin: 10px;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+  outline: none;
+}
+
+
+.login_container form button {
+  border: 2px solid #4e9cf5;
+  border-radius: 3px;
+  padding: 3px 20px;
+  cursor: pointer;
+  background-color: #4e9cf5;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  outline: none;
+  text-transform: uppercase;
+}
+
+
+
+
+
+/* END LOGIN */
+
+
+/* REGISTRATION */
+.registration_container {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.registration_container h3 {
+  color: white;
+}
+
+.registration_container form input {
+  width: 30%;
+  margin: 10px;
+  border: 2px solid white;
+  padding: 3px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.registration_container form button {
+  border: 2px solid #4e9cf5;
+  padding: 3px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: #4e9cf5;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+
+
+
+/* END REGISTRATION */
+
+
+
+/* HEADER */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #4e9cf5;
+  z-index: 10;
+}
+
+.header .header_container {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.header .header_container span {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+
+.header_container form input {
+  width: 200px;
+  border: 2px solid #4584cc;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 5px;
+  outline: none;
+  background-color: #4584cc;
+  color: white;
+}
+
+.header_container form input::placeholder {
+  color: white;
+}
+
+.user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header_container .btn_newpost {
+  font-size: 8px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  border: 2px solid white;
+  padding: 0px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  background-color: #4e9cf5;
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+}
+
+.header .header_container .btn_newpost:hover {
+  background-color: white;
+  color: #4e9cf5;
+}
+
+
+.header .header_container img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+.header .logout_btn {
+  margin: 10px;
+  font-size: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  outline: none;
+}
+
+
+
+
+/* END HEADER */
+
+/* MAIN  */
+.main_container {
+  width: 50%;
+  margin: 70px auto;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  /*background-color: #ebf3fc;*/
+  background-color: #fafafa;
+}
+
+/* END MAIN */
+
+
+/* MAIN USER INFO */
+
+.main_container .main_user_info {
+  position: fixed;
+  top: 70px;
+  left: 60px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 0 50px #e6e6e6;
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  background-color: white;
+  text-align: center;
+}
+
+.last_subscriptions_container {
+    position: fixed;
+    top: 70px;
+    right: 60px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 50px #e6e6e6;
+    /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+    border-radius: 3px;
+    padding: 10px;
+    background-color: white;
+}
+
+.last_subscriptions_container h6 {
+    text-transform: uppercase;
+    color: grey;
+}
+
+
+.last_subscriptions_container .last_sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.last_subscriptions_container .last_sub a {
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    color: #4e9cf5;
+    margin: 5px;
+}
+
+.last_subscriptions_container .last_sub img {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+
+
+.main_container .main_user_info img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+.main_user_info .user_info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+
+.main_container .main_user_info .user_info a {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4e9cf5;
+  text-decoration: none;
+}
+
+.main_container .main_user_info .user_info .full_name {
+  font-size: 12px;
+  color: grey;
+  text-align: center;
+  font-style: normal;
+}
+
+
+.main_user_info .other_info {
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.main_user_info .other_info span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #292828;
+  text-transform: uppercase;
+}
+
+
+.main_user_info .other_info p {
+  font-size: 10px;
+  color: grey;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.article_main {
+    position: relative;
+    padding: 20px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 0 20px #e6e6e6;
+}
+
+
+.article_main .article_info_user {
+    display: flex;
+    align-items: center;
+}
+
+.article_main .article_info_user a {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #4e9cf5;
+}
+
+.article_main p {
+    font-size: 14px;
+}
+
+.article_main .article_info_user span {
+    font-size: 8px;
+    color: grey;
+}
+
+.article_main .article_info_user img {
+    border-radius: 50%;
+}
+
+/* END MAIN USER INFO */
+
+
+/* DETAIL PROFILE */
+
+.detail_container {
+  width: 80%;
+  margin: 60px auto;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.detail_user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+.detail_user_info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px;
+  border: 5px solid white;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+.detail_user_info .detail_fullname {
+  margin: 10px;
+}
+
+
+.detail_user_info .detail_fullname h3 {
+  color: #292828;
+}
+
+.detail_user_info .detail_fullname p {
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.detail_user_info .detail_fullname span {
+  color: grey;
+  font-size: 12px;
+}
+
+.detail_info_post {
+  width: 100%;
+
+}
+
+.follow_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid #4e9cf5;
+  padding: 3px 20px;
+  border-radius: 3px;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #4e9cf5;
+  cursor: pointer;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+.settings_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border: 2px solid #4e9cf5;
+  padding: 3px 20px;
+  border-radius: 3px;
+  outline: none;
+  background-color: #4e9cf5;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+.detail_profile_sub {
+    width: 60%;
+    margin: 0 auto;
+    display: none;
+    text-align: center;
+    animation-name: show;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.detail_profile_sub .profile_sub {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.detail_profile_sub .profile_sub img {
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+.detail_profile_sub .profile_sub a {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #4e9cf5;
+    margin: 5px;
+}
+
+
+
+
+/* END DETAIL PROFILE */
+
+
+/* BTN CONTACT */
+.btn_contact {
+  width: 100%;
+  text-align: center;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.btn_contact h3 {
+  margin: 20px;
+}
+
+.btn_contact a {
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  color: #4e9cf5;
+  margin: 50px;
+
+  padding: 3px 30px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.btn_contact p {
+  font-size: 10px;
+  font-weight: bold;
+  color: grey;
+}
+
+/* END BTN CONTACT */
+
+
+
+/* POSTS IN PROFILE */
+
+.post_container {
+  position: relative;
+  width: 60%;
+  margin: 10px auto;
+  color: #292828;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 3px;
+  box-shadow: 0 0 20px #e6e6e6;
+  background-color: white;
+  animation-name: show;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+}
+
+
+
+
+
+.post_info {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.post_info span {
+  font-size: 8px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-style: normal;
+  color: grey;
+}
+
+.post_info .user_post {
+  font-size: 12px;
+  color: #4e9cf5;
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
+.btn_posts_followers {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+.btn_posts_followers a {
+  text-decoration: none;
+  color: grey;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px;
+  text-transform: uppercase;
+
+}
+
+.btn_posts_followers span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.post_container img {
+  border-radius: 50%;
+}
+
+
+/* END POST IN PROFILE */
+
+/* ABOUT */
+
+.about_container {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.about_container p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* END ABOUT */
+
+/* CONTACT */
+
+.contact_container {
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.contact_container p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+/* END CONTACT */
+
+
+/* SETTIGNS */
+
+.settings_container {
+  width: 50%;
+  margin: 60px auto;
+  text-align: center;
+  padding: 20px;
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.settings_container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings_container form input {
+  width: 50%;
+  margin: 10px;
+  padding: 3px 5px;
+  background-color: white;
+  border: 2px solid #4e9cf5;
+  border-radius: 3px;
+  outline: none;
+  font-size: 12px;
+  font-weight: normal;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+
+.settings_container form label {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.settings_container form textarea {
+  width: 50%;
+  height: 100px;
+  margin: 10px;
+  padding: 3px 5px;
+  background-color: white;
+  border: 2px solid #4e9cf5;
+  border-radius: 3px;
+  outline: none;
+  font-size: 12px;
+  font-weight: normal;
+  resize: none;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+
+.settings_container form button {
+  background-color: white;
+  padding: 3px 20px;
+  font-size: 10px;
+  font-weight: bold;
+  border: 2px solid #4e9cf5;
+  border-radius: 3px;
+  color: #4e9cf5;
+  margin-top: 20px;
+  cursor: pointer;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+
+
+.settings_container form button:hover {
+  background-color: #4e9cf5;
+  color: white;
+}
+
+
+
+
+
+/* END SETTIGNS */
+
+
+/* NEW POST CONTAINER */
+.new_post_container {
+    width: 50%;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.new_post_container img {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+.new_post_container p {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.new_post_container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new_post_container form textarea {
+    width: 80%;
+    height: 200px;
+    margin: 10px;
+    resize: none;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    font-size: 12px;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+.new_post_container form button {
+    padding: 3px 20px;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid #4e9cf5;
+    background-color: white;
+    color: #4e9cf5;
+    border-radius: 3px;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+
+.new_post_container form button:hover {
+    background-color: #4e9cf5;
+    color: white;
+}
+
+
+/* END NEW POST CONTAINER  */
+
+/* EDIT POST AND DELETE */
+.delete_edit_post {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.delete_edit_post a {
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: bold;
+    color: #4e9cf5;
+    text-transform: uppercase;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    padding: 2px 5px;
+    background-color: white;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.delete_edit_post a:hover {
+    background-color: #4e9cf5;
+    color: white;
+}
+
+
+.delete_edit_post .delete_btn {
+    color: #ff5c5c;
+    border: 2px solid #ff5c5c;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.delete_edit_post .delete_btn:hover {
+    background-color: #ff5c5c;
+    color: white;
+}
+
+
+/* END EDIT POST AND DELETE */
+
+
+
+
+/* EDIT CONTAINER */
+
+.edit_post_container {
+    width: 50%;
+    margin: 60px auto;
+    text-align: center;
+    padding: 20px;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.edit_post_container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_post_container form textarea {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    font-size: 12px;
+    margin: 10px;
+    resize: none;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+.edit_post_container form button {
+    background-color: white;
+    padding: 3px 20px;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    color: #4e9cf5;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #e6e6e6;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.edit_post_container form button:hover {
+    background-color: #4e9cf5;
+    color: white;
+}
+
+
+/* END BLOCK EDIT */
+
+
+/* DELETE PROFILE USER */
+
+.delete_profile_btn {
+    margin-top: 30px;
+
+}
+
+.delete_profile_btn a {
+    font-size: 10px;
+    font-weight: bold;
+    color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* END DELETE PROFILE */
+
+
+
+@keyframes show {
+
+    0% {
+        opacity: 0;
+    },
+
+    20% {
+        opacity: 0.2;
+    },
+
+    40% {
+        opacity: 0.4;
+    }
+
+    60% {
+        opacity: 0.6;
+    },
+
+    80% {
+        opacity: 0.8;
+    },
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+/* UPLOAD IMG */
+
+.settings_container form #image-preview {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border: 5px solid white;
+  color: #ecf0f1;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+.settings_container form #image-preview input {
+  line-height: 200px;
+  font-size: 200px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+.settings_container form #image-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 1;
+  cursor: pointer;
+  color: black;
+  font-size: 12px;
+  line-height: 50px;
+  text-transform: uppercase;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* END UPLOAD IMG */
+
+.not_articles {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.not_sub p {
+    font-size: 12px;
+}
