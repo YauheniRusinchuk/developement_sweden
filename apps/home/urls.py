@@ -11,11 +11,12 @@ from apps.home.views import (
     Unsubscriptions
 )
 from django.views.generic import TemplateView
-
+from apps.article.views import DetailArticle
 
 app_name = 'home'
 
 urlpatterns = [
+    path('detailarticle/<int:pk>/', DetailArticle.as_view(), name='detail_article'),
     path('unsubscriptions/<int:pk>/', Unsubscriptions.as_view(), name='unsubscriptions_page'),
     path('subscriptions/<int:pk>/', Subscriptions.as_view(), name='subscriptions_page'),
     path('profile/id<int:pk>/', DetailProfile.as_view(), name='detail_profile'),

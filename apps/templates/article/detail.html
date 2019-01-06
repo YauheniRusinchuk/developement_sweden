@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% include 'header.html' %}
+<div class="detail_article">
+    <p>{{article.text}}</p>
+    <div class="detail_article_info">
+        {% if article.author.profile.avatar %}
+            <img src="{{article.author.profile.avatar.url}}" width="50px" height="50px" />
+        {% else %}
+            <img src="https://www.eduma.cz/images/avatar.jpg" width="50px" height="50px" />
+        {% endif %}
+        <a href="{% url 'home:detail_profile' pk=article.author.pk %}">{{article.author.profile.fullname}}</a>
+        <span>{{article.date|date:'m-d H:i'}}</span>
+    </div>
+
+
+    <div class="detail_article_comments">
+        <div class="detail_comment_form">
+            {% if user.profile.avatar %}
+                <img src="{{user.profile.avatar.url}}" width="30px" height="30px" />
+            {% else %}
+                <img src="https://www.eduma.cz/images/avatar.jpg" width="30px" height="30px" />
+            {% endif %}
+            <form method="POST">{% csrf_token %}
+                {{form}}
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

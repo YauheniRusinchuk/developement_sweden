@@ -32,7 +32,7 @@ class Profile(models.Model):
 
     @property
     def last_five_sub(self):
-        return self.subscriptions.all()[::-1][:5]
+        return self.subscriptions.all()[:5][::-1]
 
 
 

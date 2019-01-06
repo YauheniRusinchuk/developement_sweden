@@ -36,14 +36,15 @@
         {% endif %}
         <div class="article_info_user">
             {% if art.author.profile.avatar %}
-                <img src="{{art.author.profile.avatar.url}}" width="30px" height="30px" />
+                <img src="{{art.author.profile.avatar.url}}" width="40px" height="40px" />
             {% else %}
-                <img src="https://www.eduma.cz/images/avatar.jpg" width="30px" height="30px" />
+                <img src="https://www.eduma.cz/images/avatar.jpg" width="40px" height="40px" />
             {% endif %}
             <a href="{% url 'home:detail_profile' pk=art.author.pk %}">{{art.author.profile.fullname}}</a>
             <span>{{art.date|date:'m-d H:i'}}</span>
         </div>
-        <p>{{art.text}}</p>
+        <p>{{art.text}} <a class="show_view" href="{% url 'home:detail_article' pk=art.pk %}">show view</a></p>
+        <span class="count_comments_class">comments:{{art.count_comments}}</span>
     </div>
   {% endfor %}
   {% else %}

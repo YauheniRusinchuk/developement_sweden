@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import apps.comments.models
 
 # Create your models here.
 class Article(models.Model):
@@ -15,3 +16,11 @@ class Article(models.Model):
 
     def __str__(self):
         return f"Article user : {self.author.username}"
+
+    @property
+    def comments(self):
+        return apps.comments.models.Comment.objects.filter(article=self)
+
+    @property
+    def count_comments(self):
+        return apps.comments.models.Comment.objects.filter(article=self).count()

@@ -9,6 +9,8 @@ from apps.Profile.forms import RegisterForm
 from django.contrib.auth.models import User
 from apps.Profile.models import Profile
 from apps.article.models import Article
+from apps.comments.models import Comment
+from apps.comments.forms import FormComment
 from apps.home.forms import LoginForm
 # Create your views here.
 
@@ -105,7 +107,9 @@ class Home(View):
         if request.user.is_authenticated:
             profile = Profile.objects.get(user=request.user)
             articles = result_article(profile)
-            return render(request, 'home/index.html', {'profile': profile, 'articles': articles})
+            return render(request, 'home/index.html',
+                {'profile': profile, 'articles': articles}
+            )
         else:
             return render(request, 'home/guest.html', {})
 
