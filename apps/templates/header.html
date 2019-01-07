@@ -2,7 +2,7 @@
   <div class="header_container">
     <span onclick="window.location.href='/'">SR.</span>
     <form action="{% url 'search:search_page' %}">
-      <input type="text" name="" placeholder="Search ...">
+      <input type="text" name="q" placeholder="Search ...">
     </form>
     <div class="user_info">
       <a class="btn_newpost" href="{% url 'home:newpost_page' %}">new post</a>

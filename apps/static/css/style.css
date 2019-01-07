@@ -1246,8 +1246,10 @@ body {
 /* SEARCH */
 
 .search_result {
+    width: 60%;
     margin: 70px auto;
     animation-name: show;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    border: 2px solid red;
 }

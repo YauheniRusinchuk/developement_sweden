@@ -8,6 +8,17 @@
 
     <h3>SEARCH</h3>
 
+    {% if articles %}
+        {% for article in articles %}
+            <div class="search_article">
+                <p>{{article.text}}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p> NOT FOUND </p>
+    {% endif %}
+
+
 </div>
 
 {% endblock %}
