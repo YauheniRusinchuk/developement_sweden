@@ -44,7 +44,7 @@
             <span>{{art.date|date:'m-d H:i'}}</span>
         </div>
         <p>{{art.text}} <a class="show_view" href="{% url 'home:detail_article' pk=art.pk %}">show view</a></p>
-        <span class="count_comments_class">comments:{{art.count_comments}}</span>
+        <p class="comments">comments : <span class="count_comments_class">{{art.count_comments}}</span></p>
     </div>
   {% endfor %}
   {% else %}

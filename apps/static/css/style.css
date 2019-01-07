@@ -1086,6 +1086,11 @@ body {
     padding: 3px 5px;
     outline: none;
     font-size: 12px;
+    font-weight: normal;
+}
+.article_main .comments {
+    font-size: 8px;
+    color: grey;
 }
 
 .count_comments_class {
@@ -1175,6 +1180,11 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+
+.detail_comment_form form input:focus {
+    background-color: white;
+}
+
 
 .comments_container {
     width: 80%;
