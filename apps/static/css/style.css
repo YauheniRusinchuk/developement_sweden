@@ -34,7 +34,7 @@ body {
   text-align: center;
   padding: 20px;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -75,7 +75,7 @@ body {
   text-align: center;
   padding: 20px;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -125,7 +125,7 @@ body {
   text-align: center;
   padding: 20px;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -257,7 +257,7 @@ body {
   width: 50%;
   margin: 70px auto;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   /*background-color: #ebf3fc;*/
   background-color: #fafafa;
@@ -433,7 +433,7 @@ body {
   width: 80%;
   margin: 60px auto;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -524,7 +524,7 @@ body {
     display: none;
     text-align: center;
     animation-name: show;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 
 }
@@ -606,7 +606,7 @@ body {
   box-shadow: 0 0 20px #e6e6e6;
   background-color: white;
   animation-name: show;
-  animation-duration: 1s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 
 }
@@ -713,7 +713,7 @@ body {
   text-align: center;
   padding: 20px;
   animation-name: show;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -796,7 +796,7 @@ body {
     text-align: center;
     padding: 20px;
     animation-name: show;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -906,7 +906,7 @@ body {
     text-align: center;
     padding: 20px;
     animation-name: show;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
 
@@ -1115,7 +1115,7 @@ body {
     width: 60%;
     margin: 70px auto;
     animation-name: show;
-    animation-duration: 0.5s;
+    animation-duration: 0.2s;
     animation-fill-mode: forwards;
     padding: 20px;
     background-color: white;
@@ -1172,9 +1172,9 @@ body {
     border: 2px solid #e5e5e5;
     border-radius: 3px;
     outline: none;
-    background-color: #e5e5e5;
+    background-color: #fafafa;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .detail_comment_form form input:focus {
@@ -1235,7 +1235,19 @@ body {
     font-weight: bold;
     padding: 2px 20px;
     border: 2px solid #4e9cf5;
-    color: #4e9cf5;
+    color: white;
+    background-color:#4e9cf5;
     border-radius: 3px;
     cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+/* SEARCH */
+
+.search_result {
+    margin: 70px auto;
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }

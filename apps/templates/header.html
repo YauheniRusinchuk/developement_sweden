@@ -1,7 +1,7 @@
 <div class="header">
   <div class="header_container">
     <span onclick="window.location.href='/'">SR.</span>
-    <form>
+    <form action="{% url 'search:search_page' %}">
       <input type="text" name="" placeholder="Search ...">
     </form>
     <div class="user_info">
