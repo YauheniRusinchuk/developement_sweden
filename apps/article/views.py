@@ -10,7 +10,6 @@ class DetailArticle(View):
     def get(self,request, *args, **kwargs):
         article = Article.objects.get(pk=kwargs['pk'])
         form = FormComment()
-        print(article.comments)
         return render(request, 'article/detail.html',
             {'article': article, 'form': form}
         )
@@ -20,4 +19,6 @@ class DetailArticle(View):
         form = FormComment(request.POST)
         if form.is_valid():
             text = form.cleaned_data['text']
+            comment = Comment(author=request.user, text=text, article=article)
+            comment.save()
         return redirect('home:home_page')

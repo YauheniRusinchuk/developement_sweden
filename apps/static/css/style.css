@@ -1175,3 +1175,39 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+
+.comments_container {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-top: 1px solid #e6e6e6;
+}
+
+
+.comments_container .not_comments {
+    text-align: center;
+}
+
+
+.comments_div {
+    display: flex;
+    align-items: center;
+}
+
+.comments_div img {
+    border-radius: 50%;
+}
+
+
+.comments_div a {
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #4e9cf5;
+    text-decoration: none;
+}
+
+.comment {
+    font-size: 12px;
+    margin-bottom: 10px;
+}

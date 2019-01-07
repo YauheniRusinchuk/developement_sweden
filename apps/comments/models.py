@@ -7,7 +7,7 @@ from apps.article.models import Article
 
 class Comment(models.Model):
 
-    author  = models.OneToOneField(User, on_delete=models.CASCADE)
+    author  = models.ForeignKey(User, on_delete=models.CASCADE)
     text    = models.TextField(blank=False)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
 

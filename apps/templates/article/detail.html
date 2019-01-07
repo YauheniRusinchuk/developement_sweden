@@ -10,19 +10,36 @@
         {% if article.author.profile.avatar %}
             <img src="{{article.author.profile.avatar.url}}" width="50px" height="50px" />
         {% else %}
-            <img src="https://www.eduma.cz/images/avatar.jpg" width="50px" height="50px" />
+            <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="50px" height="50px" />
         {% endif %}
         <a href="{% url 'home:detail_profile' pk=article.author.pk %}">{{article.author.profile.fullname}}</a>
         <span>{{article.date|date:'m-d H:i'}}</span>
     </div>
 
+    <div class="comments_container">
+        {% if article.comments %}
+            {% for com in article.comments %}
+                <div class="comments_div">
+                    {% if com.author.profile.avatar %}
+                        <img src="{{com.author.profile.avatar.url}}" width="30px" height="30px" />
+                    {% else %}
+                        <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="30px" height="30px" />
+                    {% endif %}
+                    <a href="{% url 'home:detail_profile' pk=com.author.pk %}">{{com.author.profile.fullname}}</a>
+                </div>
+                <p class="comment">{{com.text}}</p>
+            {% endfor %}
+        {% else %}
+            <p class="not_comments">not comments</p>
+        {% endif %}
+    </div>
 
     <div class="detail_article_comments">
         <div class="detail_comment_form">
             {% if user.profile.avatar %}
                 <img src="{{user.profile.avatar.url}}" width="30px" height="30px" />
             {% else %}
-                <img src="https://www.eduma.cz/images/avatar.jpg" width="30px" height="30px" />
+                <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="30px" height="30px" />
             {% endif %}
             <form method="POST">{% csrf_token %}
                 {{form}}
