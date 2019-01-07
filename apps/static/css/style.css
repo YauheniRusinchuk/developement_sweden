@@ -218,22 +218,16 @@ body {
 .header .header_container .btn_newpost {
   font-size: 8px;
   font-weight: bold;
-  color: white;
+  color: #4e9cf5;
   text-decoration: none;
   margin: 10px;
   border: 2px solid white;
   padding: 0px 5px;
   border-radius: 3px;
   text-transform: uppercase;
-  background-color: #4e9cf5;
-  transition-property: background-color, color;
-  transition-duration: 0.4s;
+  background-color: white
 }
 
-.header .header_container .btn_newpost:hover {
-  background-color: white;
-  color: #4e9cf5;
-}
 
 
 .header .header_container img {
@@ -617,7 +611,9 @@ body {
 
 }
 
-
+.post_container:hover {
+    box-shadow: 0 0 40px #e6e6e6;
+}
 
 
 
@@ -1222,6 +1218,10 @@ body {
     margin-bottom: 10px;
 }
 
+.post_container .comments {
+    font-size: 8px;
+    color: grey;
+}
 
 .btn_back {
     position: absolute;
