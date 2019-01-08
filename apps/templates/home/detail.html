@@ -39,6 +39,7 @@
     </div>
     <div class="detail_profile_sub">
         {% if profile_detail.subscriptions.all %}
+        <div class="sub_container">
         {% for sub in profile_detail.subscriptions.all %}
             <div class="profile_sub">
                 {% if sub.avatar %}
@@ -49,6 +50,7 @@
                 <a href="{% url 'home:detail_profile' pk=sub.user.pk %}">{{sub.fullname}}</a>
             </div>
         {% endfor %}
+        </div>
         {% else %}
             <h3>NOT SUBSCRIBE</h3>
         {% endif %}

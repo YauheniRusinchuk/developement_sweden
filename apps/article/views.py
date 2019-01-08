@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render,reverse
+from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from apps.article.models import Article
 from django.views import View
 from apps.comments.models import Comment
 from apps.comments.forms import FormComment
 # Create your views here.
-class DetailArticle(View):
+class DetailArticle(LoginRequiredMixin, View):
     ''' Detail article view '''
 
     def get(self,request, *args, **kwargs):
@@ -21,4 +23,4 @@ class DetailArticle(View):
             text = form.cleaned_data['text']
             comment = Comment(author=request.user, text=text, article=article)
             comment.save()
-        return redirect('home:home_page')
+        return HttpResponseRedirect(reverse('home:detail_article', kwargs={'pk': article.pk}))

@@ -1,3 +1,4 @@
+import asyncio
 from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.shortcuts import get_object_or_404
@@ -128,14 +129,10 @@ class DetailProfile(LoginRequiredMixin, View):
         except Profile.DoesNotExist:
             raise Http404("No Profile matches the given query.")
         articles = Article.objects.filter(author=profile_detail.user)
-        flag = None
+        flag = False
         current_user = Profile.objects.get(user=request.user).subscriptions.all()
-        for us in current_user:
-            if us == profile_detail:
-                flag = True
-                break
-            else:
-                flag = False
+        if profile_detail in current_user:
+            flag = True
         return render(request, 'home/detail.html',
             {'profile_detail': profile_detail, 'articles': articles, 'flag': flag}
         )
