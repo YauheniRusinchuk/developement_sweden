@@ -305,9 +305,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5px;
-    padding: 5px;
-    border-bottom: 1px solid #e6e6e6;
+    margin: 1px;
+    padding: 2px;
+    /* border: 1px solid #e6e6e6; */
 }
 
 .last_subscriptions_container .last_sub a {
@@ -315,13 +315,13 @@ body {
     font-size: 10px;
     font-weight: bold;
     color: #4e9cf5;
-    margin: 5px;
+    margin: 2px;
 }
 
 .last_subscriptions_container .last_sub img {
     border-radius: 50%;
     border: 2px solid white;
-    /* box-shadow: 0 0 10px #e6e6e6; */
+    box-shadow: 0 0 2px #e6e6e6;
 }
 
 
@@ -1210,7 +1210,7 @@ body {
 
 .btn_delete_and_edit .btn_delete_comment {
     font-size: 8px;
-    color: black;
+    color: #4e9cf5;
     text-transform: uppercase;
 }
 
@@ -1278,17 +1278,55 @@ body {
     text-align: center;
 }
 
+
+
+.search_user {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_user_info {
+    width: 200px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #e6e6e6;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_user_info span {
+    font-size: 10px;
+    color: grey;
+}
+
+.search_user img {
+    border: 1px solid white;
+    box-shadow: 0 0 1px #e6e6e6;
+    border-radius: 50%;
+}
+
+.search_user a {
+    font-size: 12px;
+    font-weight: bold;
+    color: #4e9cf5;
+    text-decoration: none;
+}
+
+
+
 /* END SEARCH */
 
 
 /* EDIT COMMENT */
-.form_update_comment {
-    width: 400px;
-    background-color: white;
-    top: 100px;
-    left: 0;
-    border: 2px solid red;
-    display: none;
-}
+
 
 /* END EDIT COMMENT */

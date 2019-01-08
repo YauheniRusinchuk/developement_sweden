@@ -30,6 +30,20 @@
             <p class="comments">comments : <span class="count_comments_class">{{article.count_comments}}</span></p>
         </div>
         {% endfor %}
+    {% elif users %}
+        {% for user in users %}
+            <div class="search_user">
+                <div class="div_user_info">
+                {% if user.profile.avatar %}
+                    <img src="{{user.profile.avatar.url}}" width="50px" height="50px" />
+                {% else %}
+                    <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="50px" height="50px" />
+                {% endif %}
+                <a href="{% url 'home:detail_profile' pk=user.profile.pk %}">{{user.profile.fullname}}</a>
+                <span>{{user.profile.description}}</span>
+                </div>
+            </div>
+        {% endfor %}
     {% else %}
         <p> NOT FOUND </p>
     {% endif %}
