@@ -67,7 +67,7 @@ class EditPost(LoginRequiredMixin, View):
         article = Article.objects.get(pk=kwargs['pk'])
         article.text = request.POST.get("edit")
         article.save()
-        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': article.author.pk}))
+        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': article.author.profile.pk}))
 
 
 

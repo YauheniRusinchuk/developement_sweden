@@ -14,7 +14,7 @@
         <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" />
     {% endif %}
     <div class="user_info">
-      <a href="{% url 'home:detail_profile' pk=user.pk %}">{{profile.fullname}}</a>
+      <a href="{% url 'home:detail_profile' pk=user.profile.pk %}">{{profile.fullname}}</a>
       <!-- <p class="full_name">{{profile.fullname}}</p> -->
     </div>
 
@@ -40,7 +40,7 @@
             {% else %}
                 <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="40px" height="40px" />
             {% endif %}
-            <a href="{% url 'home:detail_profile' pk=art.author.pk %}">{{art.author.profile.fullname}}</a>
+            <a href="{% url 'home:detail_profile' pk=art.author.profile.pk %}">{{art.author.profile.fullname}}</a>
             <span>{{art.date|date:'m-d H:i'}}</span>
         </div>
         <p>{{art.text}} <a class="show_view" href="{{  art.get_absolute_url  }}">show view</a></p>

@@ -1127,7 +1127,7 @@ body {
     animation-fill-mode: forwards;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 20px #e6e6e6;
+    box-shadow: 0 0 5px #e6e6e6;
 }
 
 .detail_article .detail_article_info {
