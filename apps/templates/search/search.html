@@ -5,14 +5,30 @@
 {% include 'header.html' %}
 
 <div class="search_result">
-
-    <h3>SEARCH</h3>
-
+    <div class="search_title">
+        <h3>RESULT</h3>
+    </div>
     {% if articles %}
         {% for article in articles %}
-            <div class="search_article">
-                <p>{{article.text}}</p>
+        <div class="article_main">
+            {% if user == article.author %}
+            <div class="delete_edit_post">
+                <a href="{% url 'home:edit_post' pk=article.pk %}">edit</a>
+                <a class="delete_btn" href="{% url 'home:delete_post' pk=article.pk %}">delete</a>
             </div>
+            {% endif %}
+            <div class="article_info_user">
+                {% if article.author.profile.avatar %}
+                    <img src="{{article.author.profile.avatar.url}}" width="40px" height="40px" />
+                {% else %}
+                    <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="40px" height="40px" />
+                {% endif %}
+                <a href="{% url 'home:detail_profile' pk=article.author.pk %}">{{article.author.profile.fullname}}</a>
+                <span>{{article.date|date:'m-d H:i'}}</span>
+            </div>
+            <p>{{article.text}} <a class="show_view" href="{% url 'home:detail_article' pk=article.pk %}">show view</a></p>
+            <p class="comments">comments : <span class="count_comments_class">{{article.count_comments}}</span></p>
+        </div>
         {% endfor %}
     {% else %}
         <p> NOT FOUND </p>

@@ -1251,5 +1251,8 @@ body {
     animation-name: show;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    border: 2px solid red;
+}
+
+.search_result .search_title {
+    text-align: center;
 }
