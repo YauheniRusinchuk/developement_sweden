@@ -12,10 +12,12 @@ from apps.home.views import (
 )
 from django.views.generic import TemplateView
 from apps.article.views import DetailArticle
+from apps.comments.views import DeleteComments
 
 app_name = 'home'
 
 urlpatterns = [
+    path('deletecomment/<int:pk>/', DeleteComments.as_view(), name='delete_comment'),
     path('detailarticle/<int:pk>/', DetailArticle.as_view(), name='detail_article'),
     path('unsubscriptions/<int:pk>/', Unsubscriptions.as_view(), name='unsubscriptions_page'),
     path('subscriptions/<int:pk>/', Subscriptions.as_view(), name='subscriptions_page'),

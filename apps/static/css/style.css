@@ -12,7 +12,8 @@
 body {
     /*background-color: #ebf3fc;*/
 
-    background-color: #fafafa;
+    /*background-color: #fafafa;*/
+    background-color: white;
 }
 
 /* GUEST */
@@ -260,7 +261,7 @@ body {
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
   /*background-color: #ebf3fc;*/
-  background-color: #fafafa;
+  background-color: white;
 }
 
 /* END MAIN */
@@ -275,7 +276,7 @@ body {
   width: 200px;
   padding: 10px;
   border-radius: 3px;
-  box-shadow: 0 0 50px #e6e6e6;
+  /* box-shadow: 0 0 50px #e6e6e6; */
   /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
   background-color: white;
   text-align: center;
@@ -287,7 +288,7 @@ body {
     right: 60px;
     width: 200px;
     text-align: center;
-    box-shadow: 0 0 50px #e6e6e6;
+    /* box-shadow: 0 0 50px #e6e6e6; */
     /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
     border-radius: 3px;
     padding: 10px;
@@ -320,7 +321,7 @@ body {
 .last_subscriptions_container .last_sub img {
     border-radius: 50%;
     border: 2px solid white;
-    box-shadow: 0 0 10px #e6e6e6;
+    /* box-shadow: 0 0 10px #e6e6e6; */
 }
 
 
@@ -329,8 +330,8 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 0 10px #e6e6e6;
+  border: 2px solid white;
+  box-shadow: 0 0 2px #e6e6e6;
 }
 
 .main_user_info .user_info {
@@ -388,14 +389,11 @@ body {
     margin: 10px auto;
     background-color: white;
     border-radius: 3px;
-    box-shadow: 0 0 20px #e6e6e6;
+    box-shadow: 0 0 5px #e6e6e6;
 }
 
 
 
-.article_main:hover {
-    box-shadow: 0 0 40px #e6e6e6;
-}
 
 .article_main .article_info_user {
     display: flex;
@@ -422,6 +420,8 @@ body {
 
 .article_main .article_info_user img {
     border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 0 0 1px #e6e6e6;
 }
 
 /* END MAIN USER INFO */
@@ -452,8 +452,8 @@ body {
   height: 100px;
   border-radius: 50%;
   margin: 10px;
-  border: 5px solid white;
-  box-shadow: 0 0 10px #e6e6e6;
+  border: 2px solid white;
+  box-shadow: 0 0 2px #e6e6e6;
 }
 
 .detail_user_info .detail_fullname {
@@ -497,7 +497,7 @@ body {
   text-transform: uppercase;
   background-color: #4e9cf5;
   cursor: pointer;
-  box-shadow: 0 0 10px #e6e6e6;
+  box-shadow: 0 0 2px #e6e6e6;
 }
 
 .settings_btn {
@@ -515,7 +515,7 @@ body {
   background-color: #4e9cf5;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 0 10px #e6e6e6;
+  box-shadow: 0 0 2px #e6e6e6;
 }
 
 .detail_profile_sub {
@@ -545,14 +545,14 @@ body {
     border-radius: 3px;
     width: 20%;
     background-color: white;
-    box-shadow: 0 0 20px #e6e6e6;
+    box-shadow: 0 0 2px #e6e6e6;
 }
 
 
 .detail_profile_sub .profile_sub img {
     border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 10px #e6e6e6;
+    border: 1px solid white;
+    box-shadow: 0 0 1px #e6e6e6;
 }
 
 .detail_profile_sub .profile_sub a {
@@ -614,7 +614,7 @@ body {
   font-size: 14px;
   font-weight: normal;
   border-radius: 3px;
-  box-shadow: 0 0 20px #e6e6e6;
+  box-shadow: 0 0 5px #e6e6e6;
   background-color: white;
   animation-name: show;
   animation-duration: 0.2s;
@@ -1205,8 +1205,21 @@ body {
     text-align: center;
 }
 
+.btn_delete_and_edit {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+
+.btn_delete_and_edit .btn_delete_comment {
+    font-size: 8px;
+    color: grey;
+    text-transform: uppercase;
+}
+
 
 .comments_div {
+    position: relative;
     display: flex;
     align-items: center;
 }

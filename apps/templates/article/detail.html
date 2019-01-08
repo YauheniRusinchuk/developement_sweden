@@ -21,6 +21,12 @@
         {% if article.comments %}
             {% for com in article.comments %}
                 <div class="comments_div">
+                    <div class="btn_delete_and_edit">
+                        {% if user == com.author %}
+                            <a class="btn_delete_comment" href="">edit</a>
+                            <a class="btn_delete_comment" href="{% url 'home:delete_comment' pk=com.pk %}">delete</a>
+                        {% endif %}
+                    </div>
                     {% if com.author.profile.avatar %}
                         <img src="{{com.author.profile.avatar.url}}" width="30px" height="30px" />
                     {% else %}
