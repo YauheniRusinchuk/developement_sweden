@@ -20,19 +20,19 @@ class Unsubscriptions(LoginRequiredMixin, View):
     ''' DELETE SUBSCRIDE  '''
     def get(self, request, *args, **kwargs):
         current_profile = Profile.objects.get(user=request.user)
-        profile_del = Profile.objects.get(user=kwargs['pk'])
+        profile_del = Profile.objects.get(pk=kwargs['pk'])
         current_profile.subscriptions.remove(profile_del)
-        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': profile_del.user.pk}))
+        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': profile_del.pk}))
 
 
 class Subscriptions(LoginRequiredMixin, View):
     ''' ADD SUBSCRIBE '''
     def get(self, request, *args, **kwargs):
         current_profile = Profile.objects.get(user=request.user)
-        profile = Profile.objects.get(user=kwargs['pk'])
+        profile = Profile.objects.get(pk=kwargs['pk'])
         current_profile.subscriptions.add(profile)
         current_profile.save()
-        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': profile.user.pk}))
+        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': profile.pk}))
 
 
 class DeleteProfile(LoginRequiredMixin, View):
@@ -50,7 +50,7 @@ class DeletePost(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         article = Article.objects.get(pk=kwargs['pk'])
         article.delete()
-        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': article.author.pk}))
+        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': article.author.profile.pk}))
 
 
 class EditPost(LoginRequiredMixin, View):

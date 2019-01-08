@@ -36,4 +36,4 @@ class Settings(LoginRequiredMixin, View):
             profile.avatar = avatar
         profile.description = request.POST.get('description')
         profile.save()
-        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': user.pk}))
+        return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': profile.pk}))

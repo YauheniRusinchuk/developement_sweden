@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 
 {% block content %}
@@ -23,7 +23,7 @@
                 <div class="comments_div">
                     <div class="btn_delete_and_edit">
                         {% if user == com.author %}
-                            <a class="btn_delete_comment" href="">edit</a>
+                            <a id="btn_edit_comment" class="btn_delete_comment" href="">edit</a>
                             <a class="btn_delete_comment" href="{% url 'home:delete_comment' pk=com.pk %}">delete</a>
                         {% endif %}
                     </div>
@@ -55,6 +55,6 @@
     </div>
 </div>
 
-
+<script src="{% static 'js/comments.js' %}" type="text/javascript"></script>
 
 {% endblock %}

@@ -6,7 +6,7 @@
     </form>
     <div class="user_info">
       <a class="btn_newpost" href="{% url 'home:newpost_page' %}">new post</a>
-      <a class="btn_login" href="{% url 'home:detail_profile' pk=user.pk %}">
+      <a class="btn_login" href="{% url 'home:detail_profile' pk=user.profile.pk %}">
         {% if user.profile.avatar %}
             <img src="{{user.profile.avatar.url}}" />
         {% else %}
