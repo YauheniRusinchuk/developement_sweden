@@ -43,7 +43,7 @@
             <a href="{% url 'home:detail_profile' pk=art.author.pk %}">{{art.author.profile.fullname}}</a>
             <span>{{art.date|date:'m-d H:i'}}</span>
         </div>
-        <p>{{art.text}} <a class="show_view" href="{% url 'home:detail_article' pk=art.pk %}">show view</a></p>
+        <p>{{art.text}} <a class="show_view" href="{{  art.get_absolute_url  }}">show view</a></p>
         <p class="comments">comments : <span class="count_comments_class">{{art.count_comments}}</span></p>
     </div>
   {% endfor %}
