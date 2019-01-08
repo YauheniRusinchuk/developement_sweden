@@ -21,18 +21,18 @@
         {% if article.comments %}
             {% for com in article.comments %}
                 <div class="comments_div">
-                    <div class="btn_delete_and_edit">
                         {% if user == com.author %}
+                            <div class="btn_delete_and_edit">
                             <a id="btn_edit_comment" class="btn_delete_comment" href="">edit</a>
                             <a class="btn_delete_comment" href="{% url 'home:delete_comment' pk=com.pk %}">delete</a>
+                            </div>
                         {% endif %}
-                    </div>
                     {% if com.author.profile.avatar %}
                         <img src="{{com.author.profile.avatar.url}}" width="30px" height="30px" />
                     {% else %}
                         <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="30px" height="30px" />
                     {% endif %}
-                    <a href="{% url 'home:detail_profile' pk=com.author.pk %}">{{com.author.profile.fullname}}</a>
+                    <a href="{% url 'home:detail_profile' pk=com.author.profile.pk %}">{{com.author.profile.fullname}}</a>
                 </div>
                 <p class="comment">{{com.text}}</p>
             {% endfor %}

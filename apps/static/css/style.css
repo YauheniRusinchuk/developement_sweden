@@ -1277,3 +1277,18 @@ body {
 .search_result .search_title {
     text-align: center;
 }
+
+/* END SEARCH */
+
+
+/* EDIT COMMENT */
+.form_update_comment {
+    width: 400px;
+    background-color: white;
+    top: 100px;
+    left: 0;
+    border: 2px solid red;
+    display: none;
+}
+
+/* END EDIT COMMENT */
