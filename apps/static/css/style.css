@@ -1327,6 +1327,49 @@ body {
 
 
 /* EDIT COMMENT */
+.form_container {
+    position: relative;
+}
+
+.open_form_edit {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    background-color: #e6e6e6;
+    box-shadow: 0 0 5px grey;
+    display: none;
+    z-index: 10;
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.form_new_comment input {
+    width: 70%;
+    border: 2px solid grey;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 12px;
+    padding: 3px 5px;
+    outline: none;
+}
+
+
+.open_form_edit #close_form {
+    position: absolute;
+    top: 1px;
+    right: 2px;
+    font-size: 8px;
+    font-weight: bold;
+    border: 2px solid #ff5c5c;
+    color: white;
+    background-color: #ff5c5c;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
 
 
 /* END EDIT COMMENT */
