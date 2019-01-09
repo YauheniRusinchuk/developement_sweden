@@ -1,12 +1,26 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 
 {% block content %}
 {% include 'header.html' %}
 <div class="notes_container">
+    {% include 'notes/formnote.html' %}
+    <div class='grid'>
+        <div class="card">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock,
+            a Latin professor at Hampden-Sydney College in Virginia,
+        </div>
+    </div>
 
-    <h3>NOTES</h3>
+    <div class="other">
+        <h5> You can leave to create notes. </h5>
+        <span class="btn_show_form">new note</span>
+    </div>
+
 
 </div>
+<script src="{% static 'js/note.js' %}" type="text/javascript"></script>
 {% endblock %}

@@ -1322,8 +1322,126 @@ body {
 /* NOTES */
 
 .notes_container {
+    width: 80%;
     margin: 70px auto;
-    border: 2px solid red;
 }
+
+.notes_container .grid {
+    width: 40%;
+
+}
+
+.notes_container .grid .card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 2px #e6e6e6;
+}
+
+.notes_container .other {
+    position: fixed;
+    top: 70px;
+    right: 150px;
+    width: 40%;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #e6e6e6;
+    background-color: white;
+    z-index: 9;
+    text-align: center;
+    padding: 10px;
+}
+
+.other span {
+    font-size: 8px;
+    font-weight: bold;
+    color: white;
+    background-color: #4e9cf5;
+    padding: 3px 20px;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+
+
+
+.form_note {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 25%;
+    width: 45%;
+    background-color: white;
+    box-shadow: 0 0 50px #e6e6e6;
+    z-index: 10;
+    text-align: center;
+    padding: 10px;
+}
+
+.form_note h5 {
+    color: #4e9cf5;
+}
+
+.form_note .btn_hide_form {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    border: 2px solid #ff5c5c;
+    border-radius: 3px;
+    background-color: #ff5c5c;
+    cursor: pointer;
+    outline: none;
+}
+
+.form_note form {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.form_note form textarea {
+    width: 80%;
+    height: 100px;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 12px;
+    margin: 10px;
+    resize: none;
+    outline: none;
+}
+
+.form_note form input {
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    padding: 3px 5px;
+    font-size: 12px;
+    outline: none;
+}
+
+.form_note form button {
+    border: 2px solid #4e9cf5;
+    padding: 3px 20px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: #4e9cf5;
+    cursor: pointer;
+    outline: none;
+    margin-top: 10px;
+    background-color: white;
+}
+
 
 /* END NOTES */
