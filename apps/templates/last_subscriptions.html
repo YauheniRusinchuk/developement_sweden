@@ -1,20 +1,7 @@
-<div class="last_subscriptions_container">
+{% if user %}
+<div class="last_notes_container">
 
-    <h6>last Subscriptions</h6>
-    {% if profile.last_five_sub %}
-    {% for sub in profile.last_five_sub %}
-        <div class="last_sub">
-            {% if sub.avatar %}
-                <img src="{{sub.avatar.url}}" width="40px" height="40px" />
-            {% else %}
-                <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="40px" height="40px" />
-            {% endif %}
-            <a href="{% url 'home:detail_profile' pk=sub.pk %}">{{sub.user.profile.fullname}}</a>
-        </div>
-    {% endfor %}
-    {% else %}
-        <div class="not_sub">
-            <p>You are not subscribed to anyone.</p>
-        </div>
-    {% endif %}
+    <h6>You last notes</h6>
+
 </div>
+{% endif %}

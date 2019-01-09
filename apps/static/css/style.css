@@ -282,7 +282,7 @@ body {
   text-align: center;
 }
 
-.last_subscriptions_container {
+.last_notes_container {
     position: fixed;
     top: 70px;
     right: 60px;
@@ -293,35 +293,12 @@ body {
     border-radius: 3px;
     padding: 10px;
     background-color: white;
+    border: 1px solid #e6e6e6;
 }
 
-.last_subscriptions_container h6 {
+.last_notes_container h6 {
     text-transform: uppercase;
     color: grey;
-}
-
-
-.last_subscriptions_container .last_sub {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1px;
-    padding: 2px;
-    /* border: 1px solid #e6e6e6; */
-}
-
-.last_subscriptions_container .last_sub a {
-    text-decoration: none;
-    font-size: 10px;
-    font-weight: bold;
-    color: #4e9cf5;
-    margin: 2px;
-}
-
-.last_subscriptions_container .last_sub img {
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 0 2px #e6e6e6;
 }
 
 
@@ -1340,3 +1317,13 @@ body {
 
 
 /* END EDIT COMMENT */
+
+
+/* NOTES */
+
+.notes_container {
+    margin: 70px auto;
+    border: 2px solid red;
+}
+
+/* END NOTES */

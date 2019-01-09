@@ -32,6 +32,5 @@ class Search(View):
                 Q(last_name__iendswith=query)
 
             )
-            print(users)
             return render(request, 'search/search.html', {'articles': articles, 'users': users})
         return redirect('home:home_page')
