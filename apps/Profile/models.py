@@ -15,6 +15,11 @@ class Profile(models.Model):
     description = models.TextField(blank=True)
     avatar = models.ImageField(upload_to='avatar/', blank=True, null=True)
     subscriptions = models.ManyToManyField('self', related_name="Subscriptions", symmetrical=False)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+
+    class Meta:
+        ordering = ['-timestamp']
 
 
     @property
@@ -30,9 +35,9 @@ class Profile(models.Model):
     def count_subscriptions(self):
         return self.subscriptions.count()
 
-    @property
+
     def last_five_sub(self):
-        return self.subscriptions.all()[:5][::-1]
+        return self.subscriptions.all()
 
 
 

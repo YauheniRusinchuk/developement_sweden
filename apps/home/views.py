@@ -91,9 +91,10 @@ class NewPost(LoginRequiredMixin, View):
 
 def result_article(profile):
     ''' Function return subscriptions articles '''
+    # articlesresult = Article.objects.filter(author=[x.user for x in profile.subscriptions.all()])
     result = []
+    articles = Article.objects.all()
     for sub in profile.subscriptions.all():
-        articles = Article.objects.all().order_by("-date")
         for art in articles:
             if sub.user == art.author:
                 result.append(art)
