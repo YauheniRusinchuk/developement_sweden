@@ -25,19 +25,9 @@
             {% for com in article.comments %}
 
                 <div class="form_container">
-                    {% if com.author == user %}
-                    <div class="open_form_edit">
-                        <span id='close_form'>close</span>
-                        <h5>EDIT COMMENT</h5>
-                        <form class="form_new_comment">
-                            <input type="text" name="" value="{{com.text}}" />
-                        </form>
-                    </div>
-                    {% endif %}
                     <div class="comments_div">
                             {% if user == com.author %}
                                 <div class="btn_delete_and_edit">
-                                <a id="btn_edit_comment" class="btn_delete_comment" href="">edit</a>
                                 <a class="btn_delete_comment" href="{% url 'home:delete_comment' pk=com.pk %}">delete</a>
                                 </div>
                             {% endif %}
