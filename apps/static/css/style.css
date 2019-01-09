@@ -1327,7 +1327,7 @@ body {
 }
 
 .notes_container .grid {
-    width: 40%;
+    width: 50%;
 
 }
 
@@ -1344,13 +1344,16 @@ body {
     position: fixed;
     top: 70px;
     right: 150px;
-    width: 40%;
+    width: 30%;
     border-radius: 3px;
-    box-shadow: 0 0 3px #e6e6e6;
     background-color: white;
     z-index: 9;
     text-align: center;
     padding: 10px;
+}
+
+.other h5 {
+    color: grey;
 }
 
 .other span {
@@ -1382,14 +1385,14 @@ body {
 }
 
 .form_note h5 {
-    color: #4e9cf5;
+    color: grey;
 }
 
 .form_note .btn_hide_form {
     position: absolute;
     top: 5px;
     right: 5px;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
@@ -1402,7 +1405,6 @@ body {
 }
 
 .form_note form {
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
