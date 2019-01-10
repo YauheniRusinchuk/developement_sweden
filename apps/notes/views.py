@@ -4,13 +4,26 @@ from apps.notes.forms import FormNote
 from apps.notes.models import Note
 
 # Create your views here.
+
+class DelelteNote(View):
+    ''' Delte note '''
+
+    def get(self, request, *args, **kwargs):
+        note = Note.objects.get(pk=kwargs['pk'])
+        if request.user == note.user:
+            note.delete()
+        return redirect('notes:notes_page')
+
+
+
+
+
 class Index(View):
     ''' Index get notes '''
 
     def get(self, request, *args, **kwargs):
         form = FormNote()
         notes = Note.objects.filter(user=request.user)
-        print(notes)
         return render(request, 'notes/index.html', {'form': form, 'notes': notes})
 
 

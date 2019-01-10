@@ -11,7 +11,7 @@
         {% for note in notes %}
             <div class="card">
                 <div class="btn_delete_note">
-                    <a href="">delete</a>
+                    <a href="{% url 'notes:delete_note' pk=note.pk %}">delete</a>
                 </div>
                 <div class="datetime_container">
                     <span>{{note.timestamp}}</span>
