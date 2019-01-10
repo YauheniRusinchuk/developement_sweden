@@ -9,13 +9,17 @@
     <div class='grid'>
         {% if notes %}
         {% for note in notes %}
-        <div class="card">
-            <div class="datetime_container">
-                <span>{{note.timestamp}}</span>
+            <div class="card">
+                <div class="btn_delete_note">
+                    <a href="">delete</a>
+                </div>
+                <div class="datetime_container">
+                    <span>{{note.timestamp}}</span>
+                </div>
+                <p>{{note.description}}</p>
+                <span class="data_create">date created this note : {{note.create}}</span>
+
             </div>
-            <p>{{note.description}}</p>
-            <span class="data_create">date created this note : {{note.create}}</span>
-        </div>
         {% endfor %}
         {% endif %}
     <div class="other">

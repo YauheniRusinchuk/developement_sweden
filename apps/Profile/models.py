@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from apps.article.models import Article
+from apps.notes.models import Note
+import datetime
 # Create your models here.
 
 
@@ -38,6 +40,14 @@ class Profile(models.Model):
 
     def last_five_sub(self):
         return self.subscriptions.all()
+
+
+    def my_notes(self):
+        notes = Note.objects.filter(user=self.user).filter(
+            timestamp=datetime.datetime.now().date()
+        )
+
+        return notes
 
 
 

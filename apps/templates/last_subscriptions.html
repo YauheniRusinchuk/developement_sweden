@@ -1,7 +1,13 @@
 {% if user %}
 <div class="last_notes_container">
 
-    <h6>You last notes</h6>
-
+    <h6>NOTES</h6>
+    {% if profile.my_notes %}
+        <p>You have notes for today.</p>
+        <a href="{% url 'notes:notes_page' %}">click</a>
+    {% else %}
+        <p>You have no notes for today. Create notes for any day.</p>
+        <a href="{% url 'notes:notes_page' %}">click</a>
+    {% endif %}
 </div>
 {% endif %}
