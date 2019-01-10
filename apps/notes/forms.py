@@ -7,4 +7,4 @@ class FormNote(forms.Form):
     time = forms.DateField(label="")
 
     body.widget.attrs.update({'placeholder': 'description ...'})
-    time.widget.attrs.update({'class': 'datetime', 'placeholder': 'datetime ...'})
+    time.widget.attrs.update({'class': 'datetime', 'placeholder': 'datetime ...', 'autocomplete' : 'off'})

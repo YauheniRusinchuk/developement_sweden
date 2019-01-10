@@ -3,7 +3,7 @@
 
     <h6>NOTES</h6>
     {% if profile.my_notes %}
-        <p>You have notes for today.</p>
+        <p>You have {{profile.my_notes.count}} notes for today.</p>
         <a href="{% url 'notes:notes_page' %}">click</a>
     {% else %}
         <p>You have no notes for today. Create notes for any day.</p>

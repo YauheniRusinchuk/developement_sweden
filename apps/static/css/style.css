@@ -1505,6 +1505,12 @@ body {
     text-transform: uppercase;
 }
 
+.btn_delete_note .btn_done {
+    border: 2px solid green;
+    background-color: white;
+    color: green;
+}
+
 
 
 /* END NOTES */
