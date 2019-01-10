@@ -11,11 +11,19 @@
         {% for note in notes %}
             <div class="card">
                 <div class="btn_delete_note">
-                    <a class="btn_done" href="">done</a>
+                    {% if note.is_done %}
+                        <a class="btn_done" href="{% url 'notes:complete_page' pk=note.pk %}">undone</a>
+                    {% else %}
+                        <a class="btn_done" href="{% url 'notes:complete_page' pk=note.pk %}">done</a>
+                    {% endif %}
                     <a href="{% url 'notes:delete_note' pk=note.pk %}">delete</a>
                 </div>
                 <div class="datetime_container">
                     <span>{{note.timestamp}}</span>
+                    {% if note.is_done %}
+                        <span class="complete">complete</span>
+                    {% else %}
+                    {% endif %}
                 </div>
                 <p>{{note.description}}</p>
                 <span class="data_create">date created this note : {{note.create}}</span>

@@ -1482,6 +1482,14 @@ body {
     border-radius: 3px;
 }
 
+.datetime_container .complete {
+    border: 2px solid green;
+    margin-left: 5px;
+    background-color: white;
+    color: green;
+}
+
+
 .data_create {
     color: #4e9cf5;
     font-size: 10px;

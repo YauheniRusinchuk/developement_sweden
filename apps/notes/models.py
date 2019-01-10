@@ -9,6 +9,7 @@ class Note(models.Model):
     description = models.TextField(blank=False)
     timestamp = models.DateField(auto_now=False)
     create = models.DateTimeField(auto_now_add=True)
+    is_done = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['timestamp']

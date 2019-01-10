@@ -2,8 +2,20 @@ from django.shortcuts import render, redirect
 from django.views import View
 from apps.notes.forms import FormNote
 from apps.notes.models import Note
-
+from django.views.generic.base import RedirectView
+from django.shortcuts import get_object_or_404
 # Create your views here.
+
+class Complete(View):
+
+    def get(self, request, *args, **kwargs):
+
+        note = get_object_or_404(Note, pk=kwargs['pk'])
+        note.is_done = not note.is_done
+        note.save()
+        return redirect('notes:notes_page')
+
+
 
 class DelelteNote(View):
     ''' Delte note '''
