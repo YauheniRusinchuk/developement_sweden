@@ -7,38 +7,17 @@
 <div class="notes_container">
     {% include 'notes/formnote.html' %}
     <div class='grid'>
-
+        {% if notes %}
+        {% for note in notes %}
         <div class="card">
             <div class="datetime_container">
-                <span>24/01/19</span>
+                <span>{{note.timestamp}}</span>
             </div>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock,
-            a Latin professor at Hampden-Sydney College in Virginia,</p>
+            <p>{{note.description}}</p>
+            <span class="data_create">date created this note : {{note.create}}</span>
         </div>
-
-        <div class="card">
-            <div class="datetime_container">
-                <span>24/01/19</span>
-            </div>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock,
-            a Latin professor at Hampden-Sydney College in Virginia,</p>
-        </div>
-
-        <div class="card">
-            <div class="datetime_container">
-                <span>24/01/19</span>
-            </div>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-            a Latin professor at Hampden-Sydney College in Virginia,</p>
-        </div>
-
-
-    </div>
-
+        {% endfor %}
+        {% endif %}
     <div class="other">
         <h5> You can leave to create notes. </h5>
         <span class="btn_show_form">new note</span>

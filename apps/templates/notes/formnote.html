@@ -1,7 +1,7 @@
 <div class="form_note">
     <span class="btn_hide_form">close</span>
     <h5> NEW NOTE </h5>
-    <form>
+    <form method="POST"> {% csrf_token %}
         {{form}}
         <button type="submit" name="button">send</button>
     </form>
