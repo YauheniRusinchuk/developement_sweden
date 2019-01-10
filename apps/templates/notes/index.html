@@ -18,10 +18,12 @@
                 </div>
                 <p>{{note.description}}</p>
                 <span class="data_create">date created this note : {{note.create}}</span>
-
             </div>
         {% endfor %}
+        {% else %}
+            <p class="no_notes"> No notes </p>
         {% endif %}
+
     <div class="other">
         <h5> You can leave to create notes. </h5>
         <span class="btn_show_form">new note</span>
