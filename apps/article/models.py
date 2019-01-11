@@ -11,7 +11,7 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.TextField(blank=False)
     date = models.DateTimeField(auto_now_add=True)
-
+    img = models.ImageField(upload_to='img_article/', blank=True)
 
     def get_absolute_url(self):
         return reverse('home:detail_article', kwargs={'pk': self.pk})
