@@ -36,18 +36,38 @@
     <div class="other">
         <h5> You can leave to create notes. </h5>
         <span class="btn_show_form">new note</span>
+        <div class="statistics">
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
 
 
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script src="{% static 'js/note.js' %}" type="text/javascript"></script>
-
 <script type="text/javascript">
     $(function(){
+        var ctx = document.getElementById('myChart').getContext('2d');
 
+        var chart = new Chart(ctx, {
+    // The type of chart we want to create
+            type: 'bar',
+    // The data for our dataset
+            data: {
+                labels: ["Monday", 'Tuesday','Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                datasets: [{
+                    label: "On when more tasks.",
+                    backgroundColor: '#8bbdf7',
+                    pointBackgroundColor: '#8bbdf7',
+                    borderColor: '#8bbdf7',
+                    showLine: true,
+                    data: [5, 11, 5, 18, 24, 17, 5],
+                }]
+            },
 
-
+            // Configuration options go here
+                options: {}
+            });
 
     });
 </script>

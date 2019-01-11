@@ -1453,14 +1453,19 @@ body {
 .notes_container .other {
     position: fixed;
     top: 70px;
-    right: 150px;
-    width: 30%;
+    right: 100px;
+    width: 40%;
     border-radius: 3px;
     background-color: white;
     z-index: 9;
     text-align: center;
     padding: 10px;
 }
+
+.other .statistics {
+    margin-top: 100px;
+}
+
 
 .other h5 {
     color: grey;
