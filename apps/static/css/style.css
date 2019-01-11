@@ -831,11 +831,19 @@ body {
     padding: 3px 20px;
     border-radius: 3px;
     color: #4e9cf5;
+    background-color: white;
+    text-transform: uppercase;
     margin: 10px;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
 }
+
+
 
 .new_post_container form .fileContainer:hover {
     cursor: pointer;
+    background-color: #4e9cf5;
+    color: white;
 }
 
 
@@ -861,6 +869,26 @@ body {
     height: 200px;
 }
 
+
+.new_post_container form #clear {
+    font-size: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #4e9cf5;
+    border-radius: 3px;
+    color: #4e9cf5;
+    background-color: white;
+    padding: 3px 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.new_post_container form #clear:hover {
+    background-color: #4e9cf5;
+    color: white;
+}
 
 .new_post_container p {
     font-size: 10px;
@@ -1432,6 +1460,7 @@ body {
     z-index: 9;
     text-align: center;
     padding: 10px;
+    border: 2px solid red;
 }
 
 .other h5 {
