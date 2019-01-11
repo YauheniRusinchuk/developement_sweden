@@ -15,7 +15,10 @@
     <form method="POST" enctype="multipart/form-data">{% csrf_token %}
         <textarea required placeholder="Your text ..." name="text"></textarea>
         <img id='img' src="#" />
-        <input id="imgInp" name='images' type="file" >
+        <label class="fileContainer">
+            photo
+            <input id="imgInp" name='images' type="file" >
+        </label>
         <button type="submit" name="button">ADD</button>
     </form>
 </div>

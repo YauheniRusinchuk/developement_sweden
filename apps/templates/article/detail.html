@@ -20,7 +20,7 @@
             <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="50px" height="50px" />
         {% endif %}
         <a href="{% url 'home:detail_profile' pk=article.author.pk %}">{{article.author.profile.fullname}}</a>
-        <span>{{article.date|date:'m-d H:i'}}</span>
+        <span>{{article.date|date:'m-d-y'}}</span>
     </div>
 
     <div class="comments_container">
