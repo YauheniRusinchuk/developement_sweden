@@ -84,6 +84,7 @@ class NewPost(LoginRequiredMixin, View):
 
     def post(self, request, *args, **kwargs):
         article = Article(author=request.user, text=request.POST.get('text'))
+        print('img', request.FILES.get('images') or None)
         article.save();
         return redirect('home:home_page')
 

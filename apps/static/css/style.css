@@ -809,6 +809,13 @@ body {
     box-shadow: 0 0 10px #e6e6e6;
 }
 
+.new_post_container form #img {
+    border-radius: 3px;
+    width: 200px;
+    height: 200px;
+}
+
+
 .new_post_container p {
     font-size: 10px;
     font-weight: bold;

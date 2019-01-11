@@ -11,9 +11,37 @@
         <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="50px" height="50px" />
     {% endif %}
     <p>{{profile.user.username}}</p>
-    <form method="POST">{% csrf_token %}
+
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
         <textarea required placeholder="Your text ..." name="text"></textarea>
+        <img id='img' src="#" />
+        <input id="imgInp" name='images' type="file" >
         <button type="submit" name="button">ADD</button>
     </form>
 </div>
+
+<script type="text/javascript">
+    $(function(){
+        $('#img').hide();
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#img').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#imgInp").change(function() {
+            readURL(this);
+            $('#img').show();
+        });
+
+    })
+
+
+
+</script>
+
 {% endblock %}
