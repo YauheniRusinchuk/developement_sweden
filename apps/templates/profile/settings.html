@@ -31,7 +31,7 @@
 
 
     <div class="delete_profile_btn">
-        <a href="{% url 'home:delete_profile' pk=profile.pk %}">delete profile</a>
+        <a href="{% url 'home:delete_profile' pk=profile.user.pk %}">delete profile</a>
     </div>
 
 </div>

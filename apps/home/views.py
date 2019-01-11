@@ -38,7 +38,7 @@ class Subscriptions(LoginRequiredMixin, View):
 class DeleteProfile(LoginRequiredMixin, View):
     ''' Delete User and Profile '''
     def get(self, request, *args, **kwargs):
-        user = User(pk=kwargs['pk'])
+        user = User.objects.get(pk=kwargs['pk'])
         if request.user == user:
             user.delete()
         return redirect('home:home_page')
