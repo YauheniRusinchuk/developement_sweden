@@ -41,8 +41,13 @@
                 <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="40px" height="40px" />
             {% endif %}
             <a href="{% url 'home:detail_profile' pk=art.author.profile.pk %}">{{art.author.profile.fullname}}</a>
-            <span>{{art.date|date:'m-d H:i'}}</span>
+            <span>{{art.date|date:'m-d-y'}}</span>
         </div>
+        {% if art.img %}
+            <div class="img_article">
+                <img src="{{art.img.url}}" />
+            </div>
+        {% endif %}
         <p>{{art.text}} <a class="show_view" href="{{  art.get_absolute_url  }}">show view</a></p>
         <p class="comments">comments : <span class="count_comments_class">{{art.count_comments}}</span></p>
     </div>

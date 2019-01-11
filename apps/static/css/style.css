@@ -388,6 +388,12 @@ body {
 }
 
 
+.img_article img {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 3px;
+}
+
 
 
 .article_main .article_info_user {
@@ -642,6 +648,12 @@ body {
   font-style: normal;
 }
 
+
+.post_container .img_article img {
+    margin-top: 10px;
+    max-width: 100%;
+    border-radius: 3px;
+}
 
 
 
@@ -1135,6 +1147,7 @@ body {
 .detail_article img {
     text-align: center;
     max-width: 100%;
+    border-radius: 3px;
 }
 
 .detail_article .detail_article_info {
