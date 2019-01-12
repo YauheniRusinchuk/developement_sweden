@@ -4,6 +4,7 @@ from apps.notes.forms import FormNote
 from apps.notes.models import Note
 from django.views.generic.base import RedirectView
 from django.shortcuts import get_object_or_404
+from datetime import datetime
 # Create your views here.
 
 class Complete(View):
@@ -36,6 +37,8 @@ class Index(View):
     def get(self, request, *args, **kwargs):
         form = FormNote()
         notes = Note.objects.filter(user=request.user)
+        date = datetime.now()
+        print(date.strftime("%A"))
         return render(request, 'notes/index.html', {'form': form, 'notes': notes})
 
 
