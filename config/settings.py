@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'apps.Profile',
     'apps.home',
     'apps.notes',
+    'apps.statistics_app',
 ]
 
 MIDDLEWARE = [

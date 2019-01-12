@@ -54,7 +54,11 @@
   {% endfor %}
   {% else %}
     <div class="not_articles">
-        <h3>No records yet.</h3>
+        <h3>Try to find interesting articles and subscribe to interesting people.</h3>
+
+        <form action="{% url 'search:search_page' %}">
+            <input type="text" name="q" value="" placeholder="Search ...">
+        </form>
     </div>
   {% endif %}
 </div>

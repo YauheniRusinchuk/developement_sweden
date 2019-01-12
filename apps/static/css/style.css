@@ -425,6 +425,19 @@ body {
     box-shadow: 0 0 1px #e6e6e6;
 }
 
+
+.not_articles form input {
+    border: 2px solid #4e9cf5;
+    padding: 2px 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 3px;
+    background-color: white;
+    outline: none;
+    margin-top: 10px;
+}
+
+
 /* END MAIN USER INFO */
 
 
@@ -1466,6 +1479,18 @@ body {
 .other .statistics {
     margin-top: 100px;
 }
+
+.other .statistics h6 {
+    font-size: 12px;
+    color: grey;
+}
+
+.other .statistics p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 
 
 .other h5 {
