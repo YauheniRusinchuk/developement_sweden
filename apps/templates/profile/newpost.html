@@ -10,7 +10,7 @@
     {% else %}
         <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="50px" height="50px" />
     {% endif %}
-    <p>{{profile.user.username}}</p>
+    <p>{{profile.fullname}}</p>
 
     <form method="POST" enctype="multipart/form-data">{% csrf_token %}
         <textarea required placeholder="Your text ..." name="text"></textarea>

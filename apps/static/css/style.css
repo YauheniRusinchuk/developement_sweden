@@ -893,6 +893,7 @@ body {
 .new_post_container p {
     font-size: 10px;
     font-weight: bold;
+    color: grey;
 }
 
 .new_post_container form {

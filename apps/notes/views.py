@@ -37,8 +37,6 @@ class Index(View):
     def get(self, request, *args, **kwargs):
         form = FormNote()
         notes = Note.objects.filter(user=request.user)
-        date = datetime.now()
-        print(date.strftime("%A"))
         return render(request, 'notes/index.html', {'form': form, 'notes': notes})
 
 
