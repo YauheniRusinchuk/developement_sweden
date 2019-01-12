@@ -219,14 +219,14 @@ body {
 .header .header_container .btn_newpost {
   font-size: 8px;
   font-weight: bold;
-  color: #4e9cf5;
+  color: white;
+  background-color: #4e9cf5;
   text-decoration: none;
   margin: 10px;
   border: 2px solid white;
-  padding: 0px 5px;
+  padding: 2px 5px;
   border-radius: 3px;
   text-transform: uppercase;
-  background-color: white
 }
 
 
