@@ -8,6 +8,12 @@
     <h3>EDIT POST</h3>
     <form method="POST"> {% csrf_token %}
         <textarea name="edit" required>{{article.text}}</textarea>
+        {% if article.img %}
+            <span id="clear">Clear</span>
+            <img width="200px;" height="200px;" id="img" src="{{article.img.url}}" />
+            <input type="file" name="" value="" />
+        {% else %}
+        {% endif %}
         <button type="submit" name="button">EDIT</button>
     </form>
 </div>

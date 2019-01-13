@@ -13,6 +13,7 @@ from apps.article.models import Article
 from apps.comments.models import Comment
 from apps.comments.forms import FormComment
 from apps.home.forms import LoginForm
+from apps.home.sorted import result_article
 # Create your views here.
 
 
@@ -90,17 +91,17 @@ class NewPost(LoginRequiredMixin, View):
 
 
 
-def result_article(profile):
-    ''' Function return subscriptions articles '''
-    # articlesresult = Article.objects.filter(author=[x.user for x in profile.subscriptions.all()])
-    result = []
-    articles = Article.objects.all()
-    for sub in profile.subscriptions.all():
-        for art in articles:
-            if sub.user == art.author:
-                result.append(art)
-    result+= profile.user.article_set.all()
-    return result
+# def result_article(profile):
+#     ''' Function return subscriptions articles '''
+#     # articlesresult = Article.objects.filter(author=[x.user for x in profile.subscriptions.all()])
+#     result = []
+#     articles = Article.objects.all()
+#     for sub in profile.subscriptions.all():
+#         for art in articles:
+#             if sub.user == art.author:
+#                 result.append(art)
+#     result+= profile.user.article_set.all()
+#     return result
 
 
 
