@@ -2,13 +2,13 @@ from django.db import models
 from django.db.models import signals
 from django.dispatch import receiver
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 from apps.article.models import Article
 from apps.notes.models import Note
 import datetime
+import os
 # Create your models here.
-
 
 
 
@@ -52,12 +52,10 @@ class Profile(models.Model):
 
 
 
-
-# @receiver(signals.post_delete, sender=Profile)
-# def delete_profile(sender, instance, **kwargs):
-#     if instance.avatar.path:
-#         storage = instance.avatar.storage
-#         path = instance.avatar.path
-#         storage.delete(path)
-#     else:
-#         instance.delete()
+@receiver(post_delete, sender=Profile)
+def my_signal(sender, instance, **kwargs):
+        if instance.avatar:
+            if os.path.isfile(instance.avatar.path):
+                os.remove(instance.avatar.path)
+        else:
+            print('NOT IMG')
