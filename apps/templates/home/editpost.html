@@ -9,13 +9,36 @@
     <form method="POST"> {% csrf_token %}
         <textarea name="edit" required>{{article.text}}</textarea>
         {% if article.img %}
-            <span id="clear">Clear</span>
-            <img width="200px;" height="200px;" id="img" src="{{article.img.url}}" />
-            <input type="file" name="" value="" />
+            <span id="clearedit">Clear</span>
+            <img width="200px;" height="200px;" id="imgedit" src="{{article.img.url}}" />
+            <label class="fileContaineredit">
+                photo
+                <input  id='file_edit' type="file" name="" value="" />
+            </label>
         {% else %}
+            <label class="no_img_file">
+                photo
+                <input  type="file" name="" value="">
+            </label>
         {% endif %}
         <button type="submit" name="button">EDIT</button>
     </form>
 </div>
+<script type="text/javascript">
 
+    $(function(){
+        $('.fileContaineredit').hide();
+        $('#clearedit').click((e)=>{
+            e.preventDefault();
+            $('#imgedit').hide('slow');
+
+            $('#clearedit').hide('slow');
+            $('.fileContaineredit').show('slow');
+        })
+
+
+
+    });
+
+</script>
 {% endblock  %}
