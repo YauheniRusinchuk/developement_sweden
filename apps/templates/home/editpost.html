@@ -6,7 +6,7 @@
 
 <div class="edit_post_container">
     <h3>EDIT POST</h3>
-    <form method="POST"> {% csrf_token %}
+    <form method="POST" enctype="multipart/form-data" > {% csrf_token %}
         <textarea name="edit" required>{{article.text}}</textarea>
         {% if article.img %}
             <span id="clearedit">Clear</span>
@@ -16,9 +16,11 @@
                 <input  id='file_edit' type="file" name="" value="" />
             </label>
         {% else %}
+            <span id='clean_add_new'>clear</span>
+            <img id='new_img_edit' width="200px;" height="200px;" src="#" />
             <label class="no_img_file">
                 photo
-                <input  type="file" name="" value="">
+                <input id='newimg_file'  type="file" name="images" value="">
             </label>
         {% endif %}
         <button type="submit" name="button">EDIT</button>
@@ -28,14 +30,39 @@
 
     $(function(){
         $('.fileContaineredit').hide();
+        $('#new_img_edit').hide();
+        $('#clean_add_new').hide();
         $('#clearedit').click((e)=>{
             e.preventDefault();
             $('#imgedit').hide('slow');
-
-            $('#clearedit').hide('slow');
             $('.fileContaineredit').show('slow');
-        })
+            $('#clearedit').hide('slow')
+        });
 
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#new_img_edit').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+        $("#newimg_file").change(function() {
+            readURL(this);
+            $('#new_img_edit').show('slow');
+            $('#clean_add_new').show('slow');
+            $('.no_img_file').hide('slow');
+        });
+
+        $('#clean_add_new').click((e)=>{
+            $('#newimg_file').val("");
+            $('#new_img_edit').hide("slow");
+            $('.no_img_file').show('slow');
+            $('#clean_add_new').hide('slow');
+        })
 
 
     });

@@ -1033,6 +1033,25 @@ body {
     cursor: pointer;
 }
 
+.edit_post_container form #clean_add_new {
+    margin-bottom: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    border: 2px solid #4e9cf5;
+    padding: 3px 20px;
+    background-color: white;
+    color: #4e9cf5;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    transition-property: background-color, color;
+}
+
+.edit_post_container form #clean_add_new:hover {
+    background-color: #4e9cf5;
+    color: white;
+}
+
 
 .edit_post_container form .no_img_file:hover {
     background-color: #4e9cf5;
@@ -1110,6 +1129,7 @@ body {
     box-shadow: 0 0 10px #e6e6e6;
     transition-property: background-color, color;
     transition-duration: 0.5s;
+    margin-top: 5px;
 }
 
 .edit_post_container form button:hover {

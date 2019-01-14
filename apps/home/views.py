@@ -67,6 +67,8 @@ class EditPost(LoginRequiredMixin, View):
     def post(self, request, *args, **kwargs):
         article = Article.objects.get(pk=kwargs['pk'])
         article.text = request.POST.get("edit")
+        img = request.FILES.get('images') or article.img
+        article.img = img 
         article.save()
         return HttpResponseRedirect(reverse('home:detail_profile', kwargs={'pk': article.author.profile.pk}))
 
