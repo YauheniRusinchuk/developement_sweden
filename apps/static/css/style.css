@@ -1733,6 +1733,17 @@ body {
 }
 
 
+.statistics a {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 3px;
+    border: 2px solid #4e9cf5;
+    color: #4e9cf5;
+    text-transform: uppercase;
+}
+
 
 /* END NOTES */
 
