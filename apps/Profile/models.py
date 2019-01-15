@@ -2,7 +2,7 @@ from django.db import models
 from django.db.models import signals
 from django.dispatch import receiver
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save, post_delete
+from django.db.models.signals import post_save, post_delete, pre_save
 from django.dispatch import receiver
 from apps.article.models import Article
 from apps.notes.models import Note
@@ -50,6 +50,10 @@ class Profile(models.Model):
         return notes
 
 
+@receiver(pre_save, sender=Profile)
+def auto_delete_pre_save(sender, instance, **kwargs):
+    if not instance.avatar:
+        return False
 
 
 @receiver(post_delete, sender=Profile)
