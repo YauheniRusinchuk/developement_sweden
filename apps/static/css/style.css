@@ -1516,6 +1516,11 @@ body {
 }
 
 
+.not_found_search {
+    text-align: center;
+    padding: 10px;
+}
+
 
 /* END SEARCH */
 
