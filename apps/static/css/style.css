@@ -1758,5 +1758,25 @@ body {
 .statistics_container {
     width: 80%;
     margin: 70px auto;
-    border: 2px solid red;
+}
+
+
+
+.statistics_container .info_user_statistics {
+    display: flex;
+    align-items: center;
+}
+
+
+.statistics_container .info_user_statistics img {
+    border-radius: 50%;
+    box-shadow: 0 0 5px #e6e6e6;
+    margin-right: 10px;
+}
+
+.statistics_container .info_user_statistics a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4e9cf5;
 }
