@@ -10,13 +10,13 @@
         <textarea name="edit" required>{{article.text}}</textarea>
         {% if article.img  %}
             <!--<span id="clearedit">Clear</span>-->
-            <img width="200px;" height="200px;" id="imgedit" src="{{article.img.url}}" />
+            <img width="100%"  id="imgedit" src="{{article.img.url}}" />
             <label class="fileContaineredit">
                 newphoto
                 <input  id='file_edit' type="file" name="images" value="" />
             </label>
         {% else %}
-            <img id='new_img_edit' width="200px;" height="200px;" src="#" />
+            <img id='new_img_edit' width="100%"  src="#" />
             <label class="fileContaineredit">
                 photo
                 <input  id='newfile_edit' type="file" name="images" value="" />
@@ -30,7 +30,7 @@
     $(function(){
         //
 
-        
+
 
         $('#new_img_edit').hide();
 
