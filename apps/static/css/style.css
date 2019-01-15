@@ -1754,3 +1754,9 @@ body {
     font-weight: bold;
     color: grey;
 }
+
+.statistics_container {
+    width: 80%;
+    margin: 70px auto;
+    border: 2px solid red;
+}
