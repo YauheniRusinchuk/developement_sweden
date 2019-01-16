@@ -1765,13 +1765,15 @@ body {
 .statistics_container .info_user_statistics {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid red;
 }
 
 
 .statistics_container .info_user_statistics img {
     border-radius: 50%;
     box-shadow: 0 0 5px #e6e6e6;
-    margin-right: 10px;
 }
 
 .statistics_container .info_user_statistics a {
@@ -1779,4 +1781,11 @@ body {
     font-size: 12px;
     font-weight: bold;
     color: #4e9cf5;
+}
+
+
+.statistics_container .statistics_graph {
+    border: 2px solid green;
+    text-align: center;
+    margin-top: 10px;
 }

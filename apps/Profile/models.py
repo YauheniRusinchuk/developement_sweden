@@ -52,9 +52,14 @@ class Profile(models.Model):
 
 @receiver(pre_save, sender=Profile)
 def auto_delete_pre_save(sender, instance, **kwargs):
-    # if not instance.avatar:
-    #     return False
-    pass
+    if not instance.avatar:
+         return False
+    old_file = sender.objects.get(user=instance.user).avatar or None
+
+    if old_file:
+        if not old_file == instance.avatar:
+            if os.path.isfile(old_file.path):
+                os.remove(old_file.path) 
 
 
 @receiver(post_delete, sender=Profile)
