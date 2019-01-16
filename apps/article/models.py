@@ -2,7 +2,7 @@ from django.db import models
 from django.shortcuts import reverse
 from django.contrib.auth.models import User
 import apps.comments.models
-from django.db.models.signals import pre_delete, post_delete
+from django.db.models.signals import pre_delete, post_delete, pre_save
 from django.dispatch import receiver
 import os
 
@@ -33,6 +33,19 @@ class Article(models.Model):
     @property
     def count_comments(self):
         return apps.comments.models.Comment.objects.filter(article=self).count()
+
+
+@receiver(pre_save, sender=Article)
+def update_to_img_article(sender, instance, **kwargs):
+    if not instance.img:
+        return False
+
+    old_file = sender.objects.get(author=instance.author).img or None
+
+    if old_file:
+        if not old_file == instance.img:
+            if os.path.isfile(old_file.path):
+                os.remove(old_file.path)
 
 
 
