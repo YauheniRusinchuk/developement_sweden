@@ -1767,7 +1767,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid red;
+    padding: 10px;
 }
 
 
@@ -1785,7 +1785,28 @@ body {
 
 
 .statistics_container .statistics_graph {
-    border: 2px solid green;
     text-align: center;
     margin-top: 10px;
+}
+
+.statistics_container .statistics_graph h5 {
+    color: grey;
+}
+
+.statistics_container .statistics_graph p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.statistics_container .statistics_graph a {
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 3px 20px;
+    border-radius: 3px;
+    border: 2px solid #4e9cf5;
+    color: #4e9cf5;
+    text-transform: uppercase;
+
 }
