@@ -25,7 +25,7 @@ class StatisticsFile:
 
     def write(self, pk, username):
         #row = dict(self.read(pk))
-        with open(self._path, 'w') as file:
+        with open(self._path, 'a') as file:
             create = csv.DictWriter(file, fieldnames=fieldList)
             create.writeheader()
             create.writerow({
