@@ -2,24 +2,22 @@ import csv
 
 
 
-
 class StatisticsFile:
 
     def __init__(self):
         self._path = 'statistics.csv'
 
-    def readByUsername(self, pk):
+    def read(self, pk):
         with open(self._path, 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 if row['Id'] == pk:
                     return row
 
-    def writeNewUser(self):
-        pass
-
+    def write(self, pk):
+        row = dict(self.read(pk))
+        print(row)
 
 
 file_statistics = StatisticsFile()
-result =  file_statistics.readByUsername('1')
-print(result)
+file_statistics.write('1')
