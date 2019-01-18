@@ -1,15 +1,20 @@
 import csv
-
+import os
 
 
 fieldList = ['Id','Username', 'Notes_count', 'Monday', 'Tuesday', 'Wednesday',
             'Thursday', 'Friday', 'Saturday', 'Sunday'
 ]
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+path = os.path.join(BASE_DIR, 'data')
+
+
 class StatisticsFile:
 
     def __init__(self):
-        self._path = 'statistics.csv'
+        self._path = path + "/" + 'statistics.csv'
 
     def read(self, pk):
         with open(self._path, 'r') as file:
