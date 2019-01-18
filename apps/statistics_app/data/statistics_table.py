@@ -5,21 +5,21 @@ import csv
 
 class StatisticsFile:
 
-    def __init__(self,username):
+    def __init__(self):
         self._path = 'statistics.csv'
-        self._username = username
 
-    def readByUsername(self):
+    def readByUsername(self, pk):
         with open(self._path, 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
-                if self._username in row['Username']:
-                    print(True)
+                if row['Id'] == pk:
+                    return row
 
     def writeNewUser(self):
         pass
 
 
 
-file_statistics = StatisticsFile('REM')
-file_statistics.readByUsername()
+file_statistics = StatisticsFile()
+result =  file_statistics.readByUsername('1')
+print(result)
