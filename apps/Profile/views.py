@@ -3,6 +3,7 @@ from django.views import View
 from apps.Profile.forms import RegisterForm
 from django.contrib.auth.models import User
 from apps.Profile.models import Profile
+from apps.statistics_app.data.data import write_new_person
 
 # Create your views here.
 
@@ -28,4 +29,5 @@ class UserRegister(View):
             user.save()
             profile = Profile(user=user)
             profile.save()
+            write_new_person(profile.pk, profile.user.username)
         return redirect('home:login_page')
