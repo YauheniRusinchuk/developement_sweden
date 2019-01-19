@@ -27,3 +27,13 @@ def write_new_person(pk,username):
             })
 
             json.dump(data, file_w)
+
+
+
+def read_statistics(pk):
+    with open(path, 'r') as file:
+        data = json.load(file)
+
+        for profile in data['Profile']:
+            if profile['id'] == pk:
+                return profile
