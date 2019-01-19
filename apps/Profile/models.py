@@ -6,7 +6,6 @@ from django.db.models.signals import post_save, post_delete, pre_save
 from django.dispatch import receiver
 from apps.article.models import Article
 from apps.notes.models import Note
-from apps.statistics_app.data.statistics_table import StatisticsFile
 import datetime
 import os
 # Create your models here.
@@ -50,11 +49,14 @@ class Profile(models.Model):
 
         return notes
 
+# 
+# @receiver(post_save, sender=Profile)
+# def create_profile_statistics(sender, instance, **kwargs):
+#     print('create statistics_profile')
+#     statistics_profile = StatisticsNotes(profile=instance.user)
+#     statistics_profile.save()
+#     print('complete ....')
 
-@receiver(post_save, sender=Profile)
-def create_profile_statistics(sender, instance, **kwargs):
-    create = StatisticsFile()
-    create.write(instance.pk, instance.user.username)
 
 
 @receiver(pre_save, sender=Profile)
