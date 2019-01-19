@@ -8,6 +8,7 @@ from apps.article.models import Article
 from apps.notes.models import Note
 import datetime
 import os
+
 # Create your models here.
 
 
@@ -49,13 +50,8 @@ class Profile(models.Model):
 
         return notes
 
-# 
-# @receiver(post_save, sender=Profile)
-# def create_profile_statistics(sender, instance, **kwargs):
-#     print('create statistics_profile')
-#     statistics_profile = StatisticsNotes(profile=instance.user)
-#     statistics_profile.save()
-#     print('complete ....')
+
+
 
 
 
