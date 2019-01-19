@@ -5,6 +5,7 @@ from apps.notes.models import Note
 from django.views.generic.base import RedirectView
 from django.shortcuts import get_object_or_404
 from datetime import datetime
+from apps.statistics_app.data.data import update_count_note
 # Create your views here.
 
 class Complete(View):
@@ -47,4 +48,5 @@ class Index(View):
             timestamp = form.cleaned_data['time']
             note = Note(user=request.user, description=description, timestamp=timestamp)
             note.save()
+            update_count_note(request.user.profile.pk)
             return redirect('notes:notes_page')
