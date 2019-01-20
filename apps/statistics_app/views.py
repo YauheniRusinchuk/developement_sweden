@@ -16,7 +16,8 @@ class Statistics(View):
 
 
 
-class StatisticsNote(View):
+class StatisticsNotes(View):
 
     def get(self, request, *args, **kwargs):
-        pass
+        data = read_statistics(request.user.profile.pk)
+        return HttpResponse(json.dumps(data), content_type='application/json')
