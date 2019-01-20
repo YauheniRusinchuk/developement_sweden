@@ -40,12 +40,12 @@ def update_to_img_article(sender, instance, **kwargs):
     if not instance.img:
         return False
 
-    old_file = sender.objects.get(author=instance.author).img or None
-
-    if old_file:
-        if not old_file == instance.img:
-            if os.path.isfile(old_file.path):
-                os.remove(old_file.path)
+    # old_file = sender.objects.get(author=instance.author).img or None
+    #
+    # if old_file:
+    #     if not old_file == instance.img:
+    #         if os.path.isfile(old_file.path):
+    #             os.remove(old_file.path)
 
 
 

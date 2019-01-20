@@ -1773,6 +1773,7 @@ body {
 
 .statistics_container .info_user_statistics img {
     border-radius: 50%;
+    border: 2px solid white;
     box-shadow: 0 0 5px #e6e6e6;
 }
 
