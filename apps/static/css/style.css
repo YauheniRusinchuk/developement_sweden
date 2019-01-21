@@ -1794,6 +1794,7 @@ body {
 .statistics_container .statistics_graph {
     text-align: center;
     margin-top: 10px;
+    display: none;
 }
 
 

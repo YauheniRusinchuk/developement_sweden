@@ -7,6 +7,8 @@ from django.shortcuts import get_object_or_404
 from datetime import datetime
 from apps.statistics_app.data.data import update_count_note
 # Create your views here.
+import datetime
+
 
 class Complete(View):
 
@@ -48,5 +50,6 @@ class Index(View):
             timestamp = form.cleaned_data['time']
             note = Note(user=request.user, description=description, timestamp=timestamp)
             note.save()
+            print('timestamp : ', timestamp.strftime('%A'))
             update_count_note(request.user.profile.pk)
             return redirect('notes:notes_page')

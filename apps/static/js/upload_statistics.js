@@ -11,6 +11,8 @@ $(function(){
             },
             success: function(data){
                 console.log(data)
+                $('#counts_notes').text(data['counts-note']);
+                $('.statistics_graph').show('fast');
             },
 
             error: function() {
