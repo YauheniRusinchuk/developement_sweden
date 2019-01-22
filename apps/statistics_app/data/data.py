@@ -24,21 +24,21 @@ def write_new_person(pk,username):
                 'id': pk,
                 'username': username,
                 'counts-note': 0,
-                'Days' : [
-                    {'Monday':      0},
-                    {'Tuesday' :    0},
-                    {'Wednesday' :  0},
-                    {'Thursday' :   0},
-                    {'Friday':      0},
-                    {'Saturday':    0},
-                    {'Sunday':      0},
-                ]
+                'Days' : {
+                    'Monday':      0,
+                    'Tuesday' :    0,
+                    'Wednesday' :  0,
+                    'Thursday' :   0,
+                    'Friday':      0,
+                    'Saturday':    0,
+                    'Sunday':      0,
+                }
             })
 
             json.dump(data, file_w)
 
 
-def update_count_note(pk):
+def update_count_note(pk, day):
     with open(path, 'r') as file:
         data = json.load(file)
 
@@ -46,6 +46,10 @@ def update_count_note(pk):
             for profile in data['Profile']:
                 if profile['id'] == pk:
                     profile['counts-note'] = profile['counts-note'] + 1
+                    days = profile['Days']
+                    for k,v in days.items():
+                        if k == day:
+                            days[k] = days[k] + 1
             json.dump(data, file_w)
 
 

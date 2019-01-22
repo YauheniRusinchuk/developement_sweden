@@ -50,6 +50,5 @@ class Index(View):
             timestamp = form.cleaned_data['time']
             note = Note(user=request.user, description=description, timestamp=timestamp)
             note.save()
-            print('timestamp : ', timestamp.strftime('%A'))
-            update_count_note(request.user.profile.pk)
+            update_count_note(request.user.profile.pk, str(timestamp.strftime('%A')))
             return redirect('notes:notes_page')
