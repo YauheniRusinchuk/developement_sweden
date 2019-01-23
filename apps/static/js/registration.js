@@ -17,7 +17,11 @@ $(function(){
             },
 
             success: function(res) {
-                $('.seccess_form').show('fast')
+                $('.seccess_form').show('slow', ()=>{
+                    $('.seccess_form').hide('slow', ()=>{
+                        window.location.href = 'http://127.0.0.1:8000/login'
+                    });
+                })
             },
 
 
