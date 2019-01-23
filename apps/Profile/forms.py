@@ -8,7 +8,7 @@ class RegisterForm(forms.Form):
     password = forms.CharField(label='',required=True,widget=forms.PasswordInput())
 
 
-    username.widget.attrs.update({'placeholder': 'Username* ...'})
-    password.widget.attrs.update({'placeholder': 'Password* ...'})
-    first_name.widget.attrs.update({'placeholder': 'First Name ...'})
-    last_name.widget.attrs.update({'placeholder': 'Last Name ...'})
+    username.widget.attrs.update({'placeholder': 'Username* ...', 'class' : 'registration_username_form'})
+    password.widget.attrs.update({'placeholder': 'Password* ...', 'class' : 'registration_password_form'})
+    first_name.widget.attrs.update({'placeholder': 'First Name ...', 'class' : 'registration_firstname_form'})
+    last_name.widget.attrs.update({'placeholder': 'Last Name ...', 'class' : 'registration_lastname_form'})
