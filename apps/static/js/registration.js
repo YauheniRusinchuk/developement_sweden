@@ -17,8 +17,7 @@ $(function(){
             },
 
             success: function(res) {
-                console.log(res)
-                console.log("success")
+                $('.seccess_form').show('fast')
             },
 
 
