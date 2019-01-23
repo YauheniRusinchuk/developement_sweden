@@ -22,19 +22,12 @@ class UserRegister(View):
         firstname = request.POST.get('firstname')
         lastname = request.POST.get('firstname')
 
-
-        #form = RegisterForm(request.POST)
-        #if form.is_valid():
-            # username = form.cleaned_data['username']
-            # first_name = form.cleaned_data['first_name']
-            # last_name = form.cleaned_data['last_name']
-            # password = form.cleaned_data['password']
-            # user = User.objects.create_user(username=username)
-            # user.first_name = first_name
-            # user.last_name = last_name
-            # user.set_password(password)
-            # user.save()
-            # profile = Profile(user=user)
-            # profile.save()
-            # write_new_person(profile.pk, profile.user.username)
+        user = User.objects.create_user(username=username)
+        user.first_name = firstname
+        user.last_name = lastname
+        user.set_password(password)
+        user.save()
+        profile = Profile(user=user)
+        profile.save()
+        write_new_person(profile.pk, profile.user.username)
         return HttpResponse('success python')
