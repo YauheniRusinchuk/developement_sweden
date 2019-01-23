@@ -18,15 +18,21 @@ $(function(){
 
             success: function(res) {
                 $('.seccess_form').show('slow', ()=>{
-                    $('.seccess_form').hide('slow', ()=>{
-                        window.location.href = 'http://127.0.0.1:8000/login'
-                    });
+                    setTimeout(()=>{
+                        $('.seccess_form').hide('slow', ()=>{
+                            window.location.href = 'http://127.0.0.1:8000/login'
+                        });
+                    }, 3000)
                 })
             },
 
 
             error: function() {
-                console.log("Error ...")
+                $('.error_form').show('slow', ()=>{
+                    setTimeout(()=>{
+                        $('.error_form').hide('slow');
+                    }, 3000)
+                })
             }
 
 
