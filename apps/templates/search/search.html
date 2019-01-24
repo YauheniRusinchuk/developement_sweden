@@ -26,6 +26,11 @@
                 <a href="{% url 'home:detail_profile' pk=article.author.profile.pk %}">{{article.author.profile.fullname}}</a>
                 <span>{{article.date|date:'m-d H:i'}}</span>
             </div>
+            {% if article.img %}
+                <div class="img_article">
+                    <img src="{{article.img.url}}" />
+                </div>
+            {% endif %}
             <p>{{article.text}} <a class="show_view" href="{% url 'home:detail_article' pk=article.pk %}">show view</a></p>
             <p class="comments">comments : <span class="count_comments_class">{{article.count_comments}}</span></p>
         </div>

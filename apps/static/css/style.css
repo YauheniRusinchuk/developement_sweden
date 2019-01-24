@@ -47,11 +47,11 @@ body {
 .guest_container a {
   display: inline-block;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   color: white;
   border: 2px solid #4e9cf5;
-  border-radius: 3px;
+  border-radius: 20px;
   padding: 3px 20px;
   cursor: pointer;
   margin: 10px;
@@ -89,8 +89,8 @@ body {
   width: 30%;
   border: 2px solid white;
   margin: 10px;
-  padding: 3px 5px;
-  border-radius: 3px;
+  padding: 3px 10px;
+  border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
   outline: none;
@@ -99,11 +99,11 @@ body {
 
 .login_container form button {
   border: 2px solid #4e9cf5;
-  border-radius: 3px;
+  border-radius: 20px;
   padding: 3px 20px;
   cursor: pointer;
   background-color: #4e9cf5;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   color: white;
   outline: none;
@@ -138,18 +138,18 @@ body {
   width: 30%;
   margin: 10px;
   border: 2px solid white;
-  padding: 3px 5px;
+  padding: 3px 10px;
   font-size: 12px;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 
 .registration_container form button {
   border: 2px solid #4e9cf5;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 20px;
   background-color: #4e9cf5;
   text-transform: uppercase;
   color: white;
@@ -172,7 +172,8 @@ body {
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: #4e9cf5;
+  /* background-color: #4e9cf5; */
+  background-color: white;
   z-index: 10;
 }
 
@@ -189,25 +190,26 @@ body {
 .header .header_container span {
   font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: #292828;
   cursor: pointer;
 }
 
 
 .header_container form input {
   width: 200px;
-  border: 2px solid #4584cc;
-  border-radius: 3px;
+  /* border: 2px solid #4584cc; */
+  border: 2px solid #e6e6e6;
+  border-radius: 20px;
   font-size: 10px;
   font-weight: bold;
-  padding: 3px 5px;
+  padding: 3px 10px;
   outline: none;
-  background-color: #4584cc;
-  color: white;
+  background-color: #e6e6e6;
+  color: #292828;
 }
 
 .header_container form input::placeholder {
-  color: white;
+  color: #292828;
 }
 
 .user_info {
@@ -219,14 +221,21 @@ body {
 .header .header_container .btn_newpost {
   font-size: 8px;
   font-weight: bold;
-  color: white;
-  background-color: #4e9cf5;
+  color: #292828;
+  background-color: white;
   text-decoration: none;
   margin: 10px;
-  border: 2px solid white;
-  padding: 2px 5px;
-  border-radius: 3px;
+  border: 2px solid #292828;
+  padding: 2px 10px;
+  border-radius: 20px;
   text-transform: uppercase;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+}
+
+.header .header_container .btn_newpost:hover {
+    background-color: black;
+    color: white;
 }
 
 
@@ -244,7 +253,7 @@ body {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  color: white;
+  color: grey;
   outline: none;
 }
 
@@ -314,9 +323,9 @@ body {
     color: #4e9cf5;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 3px 10px;
+    padding: 3px 20px;
     border: 2px solid #4e9cf5;
-    border-radius: 3px;
+    border-radius: 20px;
 }
 
 
@@ -340,7 +349,7 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  color: #4e9cf5;
+  color: #292828;
   text-decoration: none;
 }
 
@@ -407,7 +416,7 @@ body {
     text-decoration: none;
     margin-left: 10px;
     margin-right: 10px;
-    color: #4e9cf5;
+    color: #292828;
 }
 
 .article_main p {
@@ -427,14 +436,15 @@ body {
 
 
 .not_articles form input {
-    border: 2px solid #4e9cf5;
-    padding: 2px 5px;
+    border: 2px solid #292828;
+    padding: 2px 10px;
     font-size: 12px;
     font-weight: normal;
-    border-radius: 3px;
+    border-radius: 20px;
     background-color: white;
     outline: none;
     margin-top: 10px;
+    font-weight: bold;
 }
 
 
@@ -505,7 +515,7 @@ body {
   color: white;
   border: 2px solid #4e9cf5;
   padding: 3px 20px;
-  border-radius: 3px;
+  border-radius: 20px;
   outline: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -524,7 +534,7 @@ body {
   text-transform: uppercase;
   border: 2px solid #4e9cf5;
   padding: 3px 20px;
-  border-radius: 3px;
+  border-radius: 20px;
   outline: none;
   background-color: #4e9cf5;
   cursor: pointer;
@@ -573,7 +583,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     text-decoration: none;
-    color: #4e9cf5;
+    color: #292828;
     margin: 5px;
 }
 
@@ -656,7 +666,7 @@ body {
 
 .post_info .user_post {
   font-size: 12px;
-  color: #4e9cf5;
+  color: #292828;
   font-weight: bold;
   font-style: normal;
 }
@@ -755,10 +765,10 @@ body {
 .settings_container form input {
   width: 50%;
   margin: 10px;
-  padding: 3px 5px;
+  padding: 3px 10px;
   background-color: white;
   border: 2px solid #4e9cf5;
-  border-radius: 3px;
+  border-radius: 20px;
   outline: none;
   font-size: 12px;
   font-weight: normal;
@@ -795,7 +805,7 @@ body {
   font-size: 10px;
   font-weight: bold;
   border: 2px solid #4e9cf5;
-  border-radius: 3px;
+  border-radius: 20px;
   color: #4e9cf5;
   margin-top: 20px;
   cursor: pointer;
@@ -842,7 +852,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     padding: 3px 20px;
-    border-radius: 3px;
+    border-radius: 20px;
     color: #4e9cf5;
     background-color: white;
     text-transform: uppercase;
@@ -888,7 +898,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     border: 2px solid #4e9cf5;
-    border-radius: 3px;
+    border-radius: 20px;
     color: #4e9cf5;
     background-color: white;
     padding: 3px 20px;
@@ -935,7 +945,7 @@ body {
     border: 2px solid #4e9cf5;
     background-color: white;
     color: #4e9cf5;
-    border-radius: 3px;
+    border-radius: 20px;
     cursor: pointer;
     outline: none;
     transition-property: background-color, color;
@@ -966,8 +976,8 @@ body {
     color: #4e9cf5;
     text-transform: uppercase;
     border: 2px solid #4e9cf5;
-    border-radius: 3px;
-    padding: 2px 5px;
+    border-radius: 20px;
+    padding: 2px 20px;
     background-color: white;
     transition-property: background-color, color;
     transition-duration: 0.5s;
@@ -1024,7 +1034,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     padding: 3px 20px;
-    border-radius: 3px;
+    border-radius: 20px;
     color: #4e9cf5;
     background-color: white;
     text-transform: uppercase;
@@ -1042,7 +1052,7 @@ body {
     padding: 3px 20px;
     background-color: white;
     color: #4e9cf5;
-    border-radius: 3px;
+    border-radius: 20px;
     cursor: pointer;
     outline: none;
     transition-property: background-color, color;
@@ -1088,7 +1098,7 @@ body {
     font-weight: bold;
     border: 2px solid #4e9cf5;
     background-color: white;
-    border-radius: 3px;
+    border-radius: 20px;
     color: #4e9cf5;
     padding: 3px 20px;
     margin-bottom: 5px;
@@ -1114,7 +1124,7 @@ body {
     font-size: 12px;
     margin: 10px;
     resize: none;
-    box-shadow: 0 0 10px #e6e6e6;
+    box-shadow: 0 0 2px #e6e6e6;
 }
 
 .edit_post_container form button {
@@ -1123,7 +1133,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     border: 2px solid #4e9cf5;
-    border-radius: 3px;
+    border-radius: 20px;
     color: #4e9cf5;
     outline: none;
     cursor: pointer;
@@ -1266,8 +1276,8 @@ body {
     width: 500px;
     border: 1px solid #f5f5f5;
     background-color: #f5f5f5;
-    border-radius: 3px;
-    padding: 3px 5px;
+    border-radius: 20px;
+    padding: 3px 10px;
     outline: none;
     font-size: 12px;
     font-weight: normal;
@@ -1331,7 +1341,7 @@ body {
     text-decoration: none;
     font-size: 12px;
     font-weight: bold;
-    color: #4e9cf5;
+    color: #292828;
 }
 
 .detail_article_info span {
@@ -1362,9 +1372,9 @@ body {
 .detail_comment_form form input {
     width: 500px;
     margin: 0 10px;
-    padding: 2px 5px;
+    padding: 2px 20px;
     border: 2px solid #e5e5e5;
-    border-radius: 3px;
+    border-radius: 20px;
     outline: none;
     background-color: #fafafa;
     font-size: 12px;
@@ -1398,8 +1408,8 @@ body {
     font-size: 8px;
     color: #ff5c5c;
     border: 2px solid #ff5c5c;
-    padding: 2px 5px;
-    border-radius: 3px;
+    padding: 2px 10px;
+    border-radius: 20px;
     text-transform: uppercase;
     transition-property: background-color, color;
     transition-duration: 0.5s;
@@ -1425,7 +1435,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     margin-left: 10px;
-    color: #4e9cf5;
+    color: #292828;
     text-decoration: none;
 }
 
@@ -1453,7 +1463,7 @@ body {
     border: 2px solid #4e9cf5;
     color: white;
     background-color:#4e9cf5;
-    border-radius: 3px;
+    border-radius: 20px;
     cursor: pointer;
     text-transform: uppercase;
 }
@@ -1512,7 +1522,7 @@ body {
 .search_user a {
     font-size: 12px;
     font-weight: bold;
-    color: #4e9cf5;
+    color: #292828;
     text-decoration: none;
 }
 
