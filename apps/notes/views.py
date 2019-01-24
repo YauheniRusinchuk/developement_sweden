@@ -3,6 +3,7 @@ from django.views import View
 from apps.notes.forms import FormNote
 from apps.notes.models import Note
 from django.views.generic.base import RedirectView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from datetime import datetime
 from apps.statistics_app.data.data import update_count_note
@@ -10,7 +11,7 @@ from apps.statistics_app.data.data import update_count_note
 import datetime
 
 
-class Complete(View):
+class Complete(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
 
@@ -21,7 +22,7 @@ class Complete(View):
 
 
 
-class DelelteNote(View):
+class DelelteNote(LoginRequiredMixin, View):
     ''' Delte note '''
 
     def get(self, request, *args, **kwargs):
@@ -34,7 +35,7 @@ class DelelteNote(View):
 
 
 
-class Index(View):
+class Index(LoginRequiredMixin, View):
     ''' Index get notes '''
 
     def get(self, request, *args, **kwargs):

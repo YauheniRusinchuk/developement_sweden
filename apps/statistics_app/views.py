@@ -2,11 +2,12 @@ from django.shortcuts import render, HttpResponse
 from django.views import View
 from apps.statistics_app.data.data import read_statistics
 import json
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 
 
-class Statistics(View):
+class Statistics(LoginRequiredMixin, View):
     ''' Statistics page  '''
 
     def get(self, request, *args, **kwargs):
