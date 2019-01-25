@@ -981,31 +981,19 @@ body {
     font-weight: bold;
     color: #4e9cf5;
     text-transform: uppercase;
-    border: 2px solid #4e9cf5;
+    /* border: 2px solid #4e9cf5; */
     border-radius: 20px;
     padding: 2px 20px;
     background-color: white;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
 }
 
-.delete_edit_post a:hover {
-    background-color: #4e9cf5;
-    color: white;
-}
 
 
 .delete_edit_post .delete_btn {
     color: #ff5c5c;
-    border: 2px solid #ff5c5c;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
+
 }
 
-.delete_edit_post .delete_btn:hover {
-    background-color: #ff5c5c;
-    color: white;
-}
 
 
 /* END EDIT POST AND DELETE */
@@ -1649,12 +1637,10 @@ body {
     right: 5px;
     font-size: 8px;
     font-weight: bold;
-    color: white;
+    color: #ff5c5c;
     text-transform: uppercase;
     padding: 2px 5px;
-    border: 2px solid #ff5c5c;
     border-radius: 3px;
-    background-color: #ff5c5c;
     cursor: pointer;
     outline: none;
 }
@@ -1715,7 +1701,6 @@ body {
 }
 
 .datetime_container .complete {
-    border: 2px solid green;
     margin-left: 5px;
     background-color: white;
     color: green;
@@ -1738,16 +1723,13 @@ body {
     font-size: 8px;
     font-weight: bold;
     text-decoration: none;
-    color: white;
-    background-color: #ff5c5c;
+    color: #ff5c5c;
     padding: 2px 10px;
-    border: 1px solid #ff5c5c;
     border-radius: 20px;
     text-transform: uppercase;
 }
 
 .btn_delete_note .btn_done {
-    border: 2px solid green;
     background-color: white;
     color: green;
 }
