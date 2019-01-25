@@ -1,3 +1,4 @@
+{% load static %}
 <div class="header">
   <div class="header_container">
     <span onclick="window.location.href='/'">ERGGE.</span>
@@ -6,12 +7,14 @@
     </form>
     <div class="user_info">
         <a class="btn_newpost" href="{% url 'notes:notes_page' %}">my notes</a>
-        <a class="btn_newpost" href="{% url 'home:newpost_page' %}">new post</a>
+        <a class="btn_newpost_img" href="{% url 'home:newpost_page' %}">
+            <img src="{% static 'img/quill-drawing-a-line.png' %}" />
+        </a>
         <a class="btn_login" href="{% url 'home:detail_profile' pk=user.profile.pk %}">
         {% if user.profile.avatar %}
-            <img src="{{user.profile.avatar.url}}" />
+            <img class='img_user' src="{{user.profile.avatar.url}}" />
         {% else %}
-            <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" />
+            <img class="img_user" src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" />
         {% endif %}
       </a>
       <a class="logout_btn" href="{% url 'logout' %}">logout</a>

@@ -239,8 +239,14 @@ body {
 }
 
 
+.header .header_container .btn_newpost_img {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
 
-.header .header_container img {
+
+.header .header_container .img_user {
   width: 30px;
   height: 30px;
   margin-top: 10px;
