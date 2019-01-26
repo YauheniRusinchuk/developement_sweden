@@ -188,10 +188,10 @@ body {
 
 
 .header .header_container span {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
-  color: #292828;
   cursor: pointer;
+  color: #4e9cf5;
 }
 
 
@@ -1454,7 +1454,7 @@ body {
     font-size: 10px;
     font-weight: bold;
     padding: 2px 20px;
-    border: 2px solid #4e9cf5;
+    /* border: 2px solid #4e9cf5; */
     color: white;
     background-color:#4e9cf5;
     border-radius: 20px;
