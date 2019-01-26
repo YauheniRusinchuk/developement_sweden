@@ -10,7 +10,7 @@
     {% if profile.avatar %}
         <img src="{{profile.avatar.url}}" />
     {% else %}
-        <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" />
+        <img src="http://analiz-sajta.megabusin.ru/img/not-available.png" />
     {% endif %}
     <div class="user_info">
       <a href="{% url 'home:detail_profile' pk=user.profile.pk %}">{{profile.fullname}}</a>
@@ -37,7 +37,7 @@
             {% if art.author.profile.avatar %}
                 <img src="{{art.author.profile.avatar.url}}" width="40px" height="40px" />
             {% else %}
-                <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="40px" height="40px" />
+                <img src="http://analiz-sajta.megabusin.ru/img/not-available.png" width="40px" height="40px" />
             {% endif %}
             <a href="{% url 'home:detail_profile' pk=art.author.profile.pk %}">{{art.author.profile.fullname}}</a>
             <span>{{art.date|date:'m-d-y'}}</span>
@@ -59,7 +59,7 @@
             <input type="text" name="q" value="" placeholder="Search ...">
         </form>
     </div>
-  {% endif %}  
+  {% endif %}
 </div>
 
 {% endblock %}
