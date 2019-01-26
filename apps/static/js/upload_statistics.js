@@ -10,7 +10,8 @@ $(function(){
 
             },
             success: function(data){
-                console.log(data['Days'])
+                let days = data['Days'];
+                console.log(days)
                 $('#counts_notes').text(data['counts-note']);
                 $('.statistics_graph').show('fast');
             },
