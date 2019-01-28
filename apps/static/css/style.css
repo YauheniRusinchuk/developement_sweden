@@ -1735,6 +1735,10 @@ body {
     color: green;
 }
 
+.other .statistics .statistics_info  {
+    font-size: 10px;
+}
+
 
 .statistics a {
     font-size: 10px;
@@ -1804,7 +1808,7 @@ body {
 }
 
 .statistics_container .statistics_graph p {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
 }
 
@@ -1827,9 +1831,13 @@ body {
 }
 
 
-#graph table {
-    margin: 0 auto;
-    border: 1px solid red;
+#graph {
+    margin: 10px auto;
+}
+
+#graph p {
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 

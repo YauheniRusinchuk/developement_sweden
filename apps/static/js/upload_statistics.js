@@ -11,7 +11,10 @@ $(function(){
             },
             success: function(data){
                 let days = data['Days'];
-                console.log(days)
+                Object.keys(days).forEach((i,v)=> {
+
+                    $('#graph').append("<p>" + i + " - " + "<span>" + days[i] + "</span>" + "</p>")
+                })
                 $('#counts_notes').text(data['counts-note']);
                 $('.statistics_graph').show('fast');
             },
