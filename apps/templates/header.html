@@ -1,7 +1,7 @@
 {% load static %}
 <div class="header">
   <div class="header_container">
-    <span onclick="window.location.href='/'">GETSWE.COM</span>
+    <img onclick="window.location.href='/'" src="{% static 'img/logo.png' %}" />    
     <form action="{% url 'search:search_page' %}">
       <input type="text" name="q" placeholder="Search ...">
     </form>
