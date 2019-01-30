@@ -1911,6 +1911,33 @@ body {
     }
 }
 
+@media (max-width: 850px)  {
+    .guest .registration_container .form_registation input {
+        width: 60%;
+    }
+}
+
+@media (max-width: 850px) {
+    .guest .login_container input {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 510px) {
+    .guest .registration_container .form_registation input {
+        width: 70%;
+    }
+}
+
+@media (max-width: 410px) {
+    .guest .registration_container .form_registation input {
+        width: 80%;
+    }
+}
+
+
+
 
 @media (max-width: 570px) {
     .main_container {
