@@ -22,16 +22,16 @@ $(function(){
                         $('.seccess_form').hide('fast', ()=>{
                             window.location.href = 'http://127.0.0.1:8000/login'
                         });
-                    }, 3000)
+                    }, 2000)
                 })
             },
 
 
             error: function() {
-                $('.error_form').show('slow', ()=>{
+                $('.error_form').show('fast', ()=>{
                     setTimeout(()=>{
-                        $('.error_form').hide('slow');
-                    }, 3000)
+                        $('.error_form').hide('fast');
+                    }, 2000)
                 })
             }
 
