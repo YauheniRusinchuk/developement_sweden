@@ -20,7 +20,7 @@ $(function(){
                 $('.seccess_form').show('fast', ()=>{
                     setTimeout(()=>{
                         $('.seccess_form').hide('fast', ()=>{
-                            window.location.href = 'http://127.0.0.1:8000/login'
+                            window.location.href = window.location.origin + "/login"
                         });
                     }, 2000)
                 })
