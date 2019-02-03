@@ -20,7 +20,7 @@ class UserRegister(View):
         username = request.POST.get('username')
         password = request.POST.get('password')
         firstname = request.POST.get('firstname')
-        lastname = request.POST.get('firstname')
+        lastname = request.POST.get('lastname')
 
         user = User.objects.create_user(username=username)
         user.first_name = firstname
