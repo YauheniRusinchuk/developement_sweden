@@ -1,7 +1,7 @@
 {% load static %}
 <div class="header">
   <div class="header_container">
-    <img class='logo' onclick="window.location.href='/'" src="{% static 'img/logo.png' %}" />    
+    <img class='logo' onclick="window.location.href='/'" src="{% static 'img/logo.png' %}" />
     <form action="{% url 'search:search_page' %}">
       <input type="text" name="q" placeholder="Search ...">
     </form>
@@ -17,7 +17,7 @@
         {% if user.profile.avatar %}
             <img class='img_user' src="{{user.profile.avatar.url}}" />
         {% else %}
-            <img class="img_user" src="http://analiz-sajta.megabusin.ru/img/not-available.png" />
+            <img class="img_user" src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" />
         {% endif %}
       </a>
       <a class="logout_btn" href="{% url 'logout' %}">logout</a>

@@ -21,7 +21,7 @@
     {% if profile_detail.avatar %}
       <img src="{{profile_detail.avatar.url}}" alt="">
     {% else %}
-      <img src="http://analiz-sajta.megabusin.ru/img/not-available.png" alt="">
+      <img src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" alt="">
     {% endif %}
     <div class="detail_fullname">
       <h3>{{profile_detail.fullname}}</h3>
@@ -45,7 +45,7 @@
                 {% if sub.avatar %}
                     <img src="{{sub.avatar.url}}" width="70px" height="70px;" />
                 {% else %}
-                    <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="70px" height="70px" alt="">
+                    <img src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" width="70px" height="70px" alt="">
                 {% endif %}
                 <a href="{% url 'home:detail_profile' pk=sub.pk %}">{{sub.fullname}}</a>
             </div>
@@ -68,7 +68,7 @@
           {% if profile_detail.avatar %}
             <img src="{{profile_detail.avatar.url}}" width="30px" height="30px" alt="">
           {% else %}
-            <img src="https://kiittnp.in/8134d463acc8c7b66744a481847ab4b/assets/img/user.png" width="30px" height="30px" alt="">
+            <img src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" width="30px" height="30px" alt="">
           {% endif %}
           <span class="user_post">{{profile_detail.fullname}}</span>
           <span>{{article.date|date:'m-d-y'}}</span>

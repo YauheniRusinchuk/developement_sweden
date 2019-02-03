@@ -21,7 +21,7 @@
                 {% if article.author.profile.avatar %}
                     <img src="{{article.author.profile.avatar.url}}" width="40px" height="40px" />
                 {% else %}
-                    <img src="http://analiz-sajta.megabusin.ru/img/not-available.png" width="40px" height="40px" />
+                    <img src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" width="40px" height="40px" />
                 {% endif %}
                 <a href="{% url 'home:detail_profile' pk=article.author.profile.pk %}">{{article.author.profile.fullname}}</a>
                 <span>{{article.date|date:'m-d H:i'}}</span>
@@ -43,7 +43,7 @@
                 {% if user.profile.avatar %}
                     <img src="{{user.profile.avatar.url}}" width="50px" height="50px" />
                 {% else %}
-                    <img src="http://analiz-sajta.megabusin.ru/img/not-available.png" width="50px" height="50px" />
+                    <img src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" width="50px" height="50px" />
                 {% endif %}
                 <a href="{% url 'home:detail_profile' pk=user.profile.pk %}">{{user.profile.fullname}}</a>
                 <span>{{user.profile.description}}</span>
@@ -59,7 +59,7 @@
                 {% if user.profile.avatar %}
                     <img src="{{user.profile.avatar.url}}" width="50px" height="50px" />
                 {% else %}
-                    <img src="http://analiz-sajta.megabusin.ru/img/not-available.png" width="50px" height="50px" />
+                    <img src="https://www.freeiconspng.com/uploads/no-image-icon-4.png" width="50px" height="50px" />
                 {% endif %}
                 <a href="{% url 'home:detail_profile' pk=user.profile.pk %}">{{user.profile.fullname}}</a>
                 <span>{{user.profile.description}}</span>
