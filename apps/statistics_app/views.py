@@ -12,7 +12,6 @@ class Statistics(LoginRequiredMixin, View):
 
     def get(self, request, *args, **kwargs):
         result = read_statistics(request.user.profile.pk)
-        print(result)
         return render(request, 'statistics/index.html', {})
 
 
