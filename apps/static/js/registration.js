@@ -11,7 +11,7 @@ $(function(){
             data: {
                 username : $('.registration_username_form').val(),
                 firstname : $('.registration_firstname_form').val(),
-                lastname : $('.registration_last_form').val(),
+                lastname : $('.registration_lastname_form').val(),
                 password : $('.registration_password_form').val(),
                 csrfmiddlewaretoken : $('input[name=csrfmiddlewaretoken]').val()
             },
