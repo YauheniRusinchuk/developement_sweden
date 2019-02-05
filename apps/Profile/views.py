@@ -26,7 +26,10 @@ class UserRegister(View):
         user.first_name = firstname
         user.last_name = lastname
         user.set_password(password)
-        user.save()
+        try:
+            user.save()
+        except Exception:
+            return HttpResponse('error python')
         profile = Profile(user=user)
         profile.save()
         write_new_person(profile.pk, profile.user.username)
