@@ -14,9 +14,9 @@ class RegisterForm(forms.Form):
     password.widget.attrs.update({'placeholder': 'Password* ...', 'class' : 'registration_password_form',
                                     'autocomplete' : 'off',
     })
-    first_name.widget.attrs.update({'placeholder': 'First Name ...', 'class' : 'registration_firstname_form',
+    first_name.widget.attrs.update({'placeholder': 'First Name* ...', 'class' : 'registration_firstname_form',
                                     'autocomplete' : 'off',
     })
-    last_name.widget.attrs.update({'placeholder': 'Last Name ...', 'class' : 'registration_lastname_form',
+    last_name.widget.attrs.update({'placeholder': 'Last Name* ...', 'class' : 'registration_lastname_form',
                                     'autocomplete' : 'off',
     })
